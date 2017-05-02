@@ -2,7 +2,7 @@
 	display: none;
 	margin: auto;
 	position: relative;
-	background-image: url("../resources/ace.jpg");
+	background-image: url("../resources/menu/background.png");
 	background-size: 1000px 600px;
     border: 2px solid #aaaaaa;
 }
@@ -62,7 +62,7 @@
 	border: 4px #DDDDDD;
 	border-style: ridge groove groove ridge;
 	float: right;
-	background-image: url("../resources/ace.jpg");
+	background-image: url("../resources/menu/background.png");
 	background-size: 390px 390px;
 }
 
@@ -77,7 +77,7 @@
 	margin-left: 50px;
 }
 
-#startButtonSinglePLayer{
+#startButtonSinglePlayer{
 	float: right;
 	margin-right: 50px;
 }
