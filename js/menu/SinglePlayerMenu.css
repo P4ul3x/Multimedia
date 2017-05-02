@@ -1,0 +1,83 @@
+#SinglePlayerMenu{
+	display: none;
+	margin: auto;
+	position: relative;
+	background-image: url("../resources/menu/background.png");
+	background-size: 1000px 600px;
+    border: 2px solid #aaaaaa;
+}
+
+#levelDiv, #characterDiv{
+	width: 450px;
+	height: 500px;
+	position: relative;
+	background-size: 500px 500px;
+	background-color: blue;
+	float: left;
+}
+
+#characterDiv{
+	width: 550px;
+}
+
+#levelNavigation{
+	width: 420px;
+	height: 440px;
+	padding-top: 30px;
+	float: right;
+}
+
+.levelButton, .characterButton{
+	height: 70px;
+}
+
+.levelButton{
+	width: 400px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: right;
+}
+
+#characterDiv{
+	background-color: green;
+}
+
+#characterNavigation{
+	width: 70px;
+	margin: 20px;
+	float: left;
+	padding-top: 90px;
+}
+
+.characterButton{
+	width: 70px;
+}
+
+#slideshow{
+	width: 382px;
+	height: 382px;
+	margin: 55px;
+	margin-right: 50px;
+	margin-left: 0px;
+	border: 4px #DDDDDD;
+	border-style: ridge groove groove ridge;
+	float: right;
+	background-image: url("../resources/menu/background.png");
+	background-size: 390px 390px;
+}
+
+#backButtonSinglePlayer, #startButtonSinglePlayer{
+	width: 100px;
+	height: 50px;
+	margin: 25px;
+}
+
+#backButtonSinglePlayer{
+	float: left;
+	margin-left: 50px;
+}
+
+#startButtonSinglePlayer{
+	float: right;
+	margin-right: 50px;
+}
