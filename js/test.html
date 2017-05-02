@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/Menu.css">
+	<link rel="stylesheet" type="text/css" href="../css/MainMenu.css">
+	<link rel="stylesheet" type="text/css" href="../css/SinglePlayerMenu.css">
+	<link rel="stylesheet" type="text/css" href="../css/MultiPlayerMenu.css">
+	<link rel="stylesheet" type="text/css" href="../css/OptionsMenu.css">
+	<link rel="stylesheet" type="text/css" href="../css/HelpMenu.css">
+	<link rel="stylesheet" type="text/css" href="../css/CreditsMenu.css">
+	<link rel="stylesheet" type="text/css" href="../css/GameMenu.css">
+	<link rel="stylesheet" type="text/css" href="../css/GamePauseMenu.css">
+	<script type="text/javascript" src="global.js"></script>
+	<script type="text/javascript" src="game/Location.js"></script>
+	<script type="text/javascript" src="game/Entity.js"></script>
+	<script type="text/javascript" src="game/LivingEntity.js"></script>
+	<script type="text/javascript" src="game/Engine.js"></script>
+	<script type="text/javascript" src="menu/Menu.js"></script>
+	<script type="text/javascript" src="menu/MainMenu.js"></script>
+	<script type="text/javascript" src="menu/SinglePlayerMenu.js"></script>
+	<script type="text/javascript" src="menu/MultiPlayerMenu.js"></script>
+	<script type="text/javascript" src="menu/OptionsMenu.js"></script>
+	<script type="text/javascript" src="menu/HelpMenu.js"></script>
+	<script type="text/javascript" src="menu/CreditsMenu.js"></script>
+	<script type="text/javascript" src="menu/GameMenu.js"></script>
+	<script type="text/javascript" src="menu/GamePauseMenu.js"></script>
+	<script type="text/javascript">
+
+		"use strict";
+
+		var tests = [
+			Location.test,
+			Entity.test,
+			LivingEntity.test,
+			Engine.test,
+			Menu.test,
+			MainMenu.test,
+			SinglePlayerMenu.test,
+			MultiPlayerMenu.test,
+			OptionsMenu.test,
+			HelpMenu.test,
+			CreditsMenu.test,
+			GameMenu.test,
+			GamePauseMenu.test
+		];
+
+		(
+			function(){
+				window.addEventListener("load",test);
+			}()
+		);
+
+		function test(){
+			var i = 1;
+			function next(){
+				window.removeEventListener("done",next);
+				if(i<tests.length){
+					window.addEventListener("done",next);
+					tests[i++]();
+				}
+			}
+			window.addEventListener("done",next);
+			tests[0]();
+		}
+
+	</script>
+</head>
+<body>
+	<canvas id="GameCanvas"></canvas>
+</body>
+</html>
