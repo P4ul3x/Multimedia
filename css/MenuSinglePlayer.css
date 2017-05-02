@@ -1,0 +1,83 @@
+#singleplayer{
+	display: none;
+	margin: auto;
+	position: relative;
+	background-image: url("../resources/ace.jpg");
+	background-size: 1000px 600px;
+    border: 2px solid #aaaaaa;
+}
+
+#levels, #characters{
+	width: 450px;
+	height: 500px;
+	position: relative;
+	background-size: 500px 500px;
+	background-color: blue;
+	float: left;
+}
+
+#characters{
+	width: 550px;
+}
+
+#navLevels{
+	width: 420px;
+	height: 440px;
+	padding-top: 30px;
+	float: right;
+}
+
+.lvlBtn, .charBtn{
+	height: 70px;
+}
+
+.lvlBtn{
+	width: 400px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: right;
+}
+
+#characters{
+	background-color: green;
+}
+
+#navCharacters{
+	width: 70px;
+	margin: 20px;
+	float: left;
+	padding-top: 90px;
+}
+
+.charBtn{
+	width: 70px;
+}
+
+#show{
+	width: 382px;
+	height: 382px;
+	margin: 55px;
+	margin-right: 50px;
+	margin-left: 0px;
+	border: 4px #DDDDDD;
+	border-style: ridge groove groove ridge;
+	float: right;
+	background-image: url("../resources/ace.jpg");
+	background-size: 390px 390px;
+}
+
+#back, #singleStart{
+	width: 100px;
+	height: 50px;
+	margin: 25px;
+}
+
+#back{
+	float: left;
+	margin-left: 50px;
+}
+
+#singleStart{
+	float: right;
+	margin-right: 50px;
+}
