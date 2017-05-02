@@ -1,4 +1,4 @@
-#singleplayer{
+#SinglePlayerMenu{
 	display: none;
 	margin: auto;
 	position: relative;
@@ -7,7 +7,7 @@
     border: 2px solid #aaaaaa;
 }
 
-#levels, #characters{
+#levelDiv, #characterDiv{
 	width: 450px;
 	height: 500px;
 	position: relative;
@@ -16,44 +16,44 @@
 	float: left;
 }
 
-#characters{
+#characterDiv{
 	width: 550px;
 }
 
-#navLevels{
+#levelNavigation{
 	width: 420px;
 	height: 440px;
 	padding-top: 30px;
 	float: right;
 }
 
-.lvlBtn, .charBtn{
+.levelButton, .characterButton{
 	height: 70px;
 }
 
-.lvlBtn{
+.levelButton{
 	width: 400px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	float: right;
 }
 
-#characters{
+#characterDiv{
 	background-color: green;
 }
 
-#navCharacters{
+#characterNavigation{
 	width: 70px;
 	margin: 20px;
 	float: left;
 	padding-top: 90px;
 }
 
-.charBtn{
+.characterButton{
 	width: 70px;
 }
 
-#show{
+#slideshow{
 	width: 382px;
 	height: 382px;
 	margin: 55px;
@@ -66,18 +66,18 @@
 	background-size: 390px 390px;
 }
 
-#back, #singleStart{
+#backButtonSinglePlayer, #startButtonSinglePlayer{
 	width: 100px;
 	height: 50px;
 	margin: 25px;
 }
 
-#back{
+#backButtonSinglePlayer{
 	float: left;
 	margin-left: 50px;
 }
 
-#singleStart{
+#startButtonSinglePLayer{
 	float: right;
 	margin-right: 50px;
 }
