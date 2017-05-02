@@ -5,8 +5,14 @@
 class SinglePlayerMenu extends Menu {
 
 	constructor(){
-
 		super("SinglePlayerMenu");
+		var levelButton = new Array()
+		var characterButton = newArray()
+
+		for(let i=1; i<5 ;++i)
+			levelButton.append(document.getElementById("levelButton"+i))
+		for(let i=1; i<5 ;++i)
+			characterButton.append(document.getElementById("characterButton"+i))
 	}
 
 	static test(){
