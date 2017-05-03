@@ -1,1 +1,14 @@
-/* @Version: 0.1.0 */
+#OptionsMenu button {
+	color: white;
+	font-weight: bold;
+	width: 150px;
+	padding: 15px;
+	border: none;
+	border-radius: 25px;
+	background-color: #616161;
+	position: relative;
+}
+
+#OptionsMenu button:hover {
+	background-color: #757575;
+}
