@@ -29,7 +29,7 @@
 	<script type="text/javascript" src="../js/index.js"></script>
 </head>
 <body>
-	<audio autoplay loop>
+	<audio id="music" autoplay loop>
 		<source src="../resources/menu/Direct-Tranquility.mp3" type="audio/mpeg">
 		Your browser does not support the html5 audio tag.
 	</audio>
@@ -41,29 +41,12 @@
 		<button id="MainMenuCreditsButton">Credits</button>
 		<button id="MainMenuQuitButton">Quit</button>
 	</div>
-	<div id="SinglePlayerMenu" class="Menu">
-		<div id="levelDiv">
-			<nav id="levelNavigation">
-				<button id="levelButton1" class="levelButton">Nível 1</button>
-				<button id="levelButton2" class="levelButton">Nível 2</button>
-				<button id="levelButton3" class="levelButton">Nível 3</button>
-				<button id="levelButton4" class="levelButton">Nível 4</button>
-			</nav>
-		</div>
-		<div id="characterDiv">
-			<nav id ="characterNavigation">
-				<button id="characterButton1" class="characterButton"></button>
-				<button id="characterButton2" class="characterButton"></button>
-				<button id="characterButton3" class="characterButton"></button>
-				<button id="characterButton4" class="characterButton"></button>
-			</nav>
-			<figure id="slideshow"></figure>
-		</div>
-		<button id="backButtonSinglePlayer">Back</button>
-		<button id="startButtonSinglePlayer">Start</button>
-	</div>
+	<div id="SinglePlayerMenu" class="Menu"></div>
 	<div id="MultiPlayerMenu" class="Menu"></div>
-	<div id="OptionsMenu" class="Menu"></div>
+	<div id="OptionsMenu" class="Menu">
+		<button id="OptionsMenuBackButton">Back</button>
+		<input id="VolumeControl" type="range" min="0.0" max="1.0" step="0.01">
+	</div>
 	<div id="HelpMenu" class="Menu">
 		<button id="HelpMenuBackButton">Back</button>
 	</div>
