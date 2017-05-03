@@ -12,3 +12,13 @@
 #OptionsMenu button:hover {
 	background-color: #757575;
 }
+
+#OptionsMenuBackButton {
+	top: 553px;
+}
+
+#VolumeControl {
+	position: relative;
+  top: 400px;
+	left: 260px;
+}
