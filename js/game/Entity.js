@@ -14,18 +14,6 @@ class Entity {
 	constructor(identification){
 
 		this.identification = identification;
-		this.location = undefined;
-	}
-
-	/*
-		Tells the entity to spawn in a certain location
-		of a given context.
-	*/
-	spawn(context,location){
-
-		if(!(context instanceof CanvasRenderingContext2D)
-		|| !(location instanceof Location))
-			throw "Entity: spawn(): InvalidArgumentsException";
 	}
 
 	/*
