@@ -10,30 +10,26 @@ class GameMenu extends Menu {
 
 		this.canvas = document.getElementById("GameMenuCanvas");
 
-		window.addEventListener("backKeyUp",this.backKeyUpHandler.bind(this));
+		window.addEventListener("backKeyUp",this.backKeyUpHandler);
 	}
 
 	backKeyUpHandler(keyEvent){
 
-		window.dispatchEvent(new Event("showMainMenu"));
+		window.dispatchEvent(new Event("showGamePauseMenu"));
 	}
 
 	// @OVERRIDE
 	hide(){
 
-		window.removeEventListener("backKeyPress",this.backKeyPressHandler);
+		window.removeEventListener("backKeyUp",this.backKeyUpHandler);
 
 		super.hide();
 	}
 
 	static test(){
 		console.log("TEST: GAME MENU");
-		let menu = new GameMenu();
-		window.addEventListener("showMainMenu",function(){
-			console.log("GAME MENU TEST SUCCEEDED");
-			window.dispatchEvent(new Event("done"));
-		});
-		menu.show();
+		console.log("GAME MENU TEST SUCCEEDED");
+		window.dispatchEvent(new Event("done"));
 	}
 }
 
