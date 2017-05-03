@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta charset="utf-8">
+	<title>Uni</title>
 	<link rel="stylesheet" type="text/css" href="../css/Menu.css">
 	<link rel="stylesheet" type="text/css" href="../css/MainMenu.css">
 	<link rel="stylesheet" type="text/css" href="../css/SinglePlayerMenu.css">
@@ -12,8 +13,9 @@
 	<link rel="stylesheet" type="text/css" href="../css/GameMenu.css">
 	<link rel="stylesheet" type="text/css" href="../css/GamePauseMenu.css">
 	<script type="text/javascript" src="../js/global.js"></script>
-	<script type="text/javascript" src="../js/game/Location.js"></script>
-	<script type="text/javascript" src="../js/game/Entity.js"></script>
+	<script type="text/javascript" src="../js/game/component/Component.js"></script>
+	<script type="text/javascript" src="../js/game/component/Location.js"></script>
+	<script type="text/javascript" src="../js/game/entity/Entity.js"></script>
 	<script type="text/javascript" src="../js/game/Engine.js"></script>
 	<script type="text/javascript" src="../js/menu/Menu.js"></script>
 	<script type="text/javascript" src="../js/menu/MainMenu.js"></script>
@@ -25,7 +27,6 @@
 	<script type="text/javascript" src="../js/menu/GameMenu.js"></script>
 	<script type="text/javascript" src="../js/menu/GamePauseMenu.js"></script>
 	<script type="text/javascript">
-
 		"use strict";
 
 		var tests = [
