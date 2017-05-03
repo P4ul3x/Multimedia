@@ -6,6 +6,7 @@
 	font-weight: bold;
 	width: 150px;
 	padding: 15px;
+	margin-bottom: 10px;
 	border: none;
 	border-radius: 25px;
 	background-color: #616161;
@@ -16,33 +17,11 @@
 	background-color: #757575;
 }
 
-#MainMenuSinglePlayerButton {
-	top: 100px;
-	left: 380px;
-}
-
-#MainMenuMultiPlayerButton {
-	top: 180px;
-	left: 226px;
-}
-
-#MainMenuOptionsButton {
-	top: 260px;
-	left: 72px;
-}
-
-#MainMenuHelpButton {
-	top: 340px;
-	left: -82px;
-}
-
-#MainMenuCreditsButton {
-	top: 420px;
-	left: -236px;
-}
-
-#MainMenuQuitButton {
-	top: 444px;
-	left: 380px;
+#MainMenuButtons {
+	position: relative;
+	top: 250px;
+	width: 150px;
+	margin: auto;
+	bottom: 0px;
 }
 
