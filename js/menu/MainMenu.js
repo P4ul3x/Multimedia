@@ -61,11 +61,10 @@ class MainMenu extends Menu {
 		|| !(button instanceof HTMLButtonElement)
 		) throw "MainMenu: selectButton(): InvalidArgumentsException";
 
-		if(this.selectedButton) this.selectedButton.blur();
+		if(this.selectedButton) this.selectedButton.id = "";
 
 		this.selectedButton = button;
-		this.selectedButton.focus();
-
+		this.selectedButton.id = "SelectedButton";
 	}
 
 	enterKeyDownHandler(){
