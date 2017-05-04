@@ -1,16 +1,11 @@
 "use strict";
 
-// @Version: 0.1.0
-
 /*
 	An Engine is responsible for keeping entities updated.
 	It has it's own way of working assynchronously to reach this goal.
 */
 class Engine {
 
-	/*
-		@entities: Collection of Entity objects to iterate
-	*/
 	constructor(){
 
 		this.entities = {};
@@ -30,6 +25,10 @@ class Engine {
 		this.entities[entity.identification] = entity;
 	}
 
+	/*
+		Removes an entity from this engine collection of entities.
+		The removed entity will stop being updated by this engine.
+	*/
 	removeEntity(entityIdentification){
 
 		delete this.entities[entityIdentification];
