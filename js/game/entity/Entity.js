@@ -8,14 +8,9 @@
 */
 class Entity {
 
-	/*
-		@identification: any comparable object
-	*/
-	constructor(identification){
+	constructor(){
 
-		if(!identification) throw "Entity: constructor(): InvalidArgumentsException";
-
-		this.identification = identification;
+		this.identification = this.constructor.name + nextIdentification(this.constructor.name);
 		this.components = {};
 	}
 
