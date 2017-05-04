@@ -1,19 +1,17 @@
 "use strict";
 
-// @Version: 0.1.3
-
 /*
-	Define global constants
+	Define global variables
 */
 
 window.GLOBAL = {
 	KEYS:{
-		ENTER:"Enter",
-		BACK:"b",
 		UP:"ArrowUp",
 		RIGHT:"ArrowRight",
 		DOWN:"ArrowDown",
-		LEFT:"ArrowLeft"
+		LEFT:"ArrowLeft",
+		ENTER:"Enter",
+		BACK:"b"
 	}
 };
 

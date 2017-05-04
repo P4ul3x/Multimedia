@@ -1,7 +1,5 @@
 "use strict";
 
-// @Version: 0.1.3
-
 (
 	function(){
 		window.addEventListener("load",main);
@@ -82,9 +80,9 @@ function main(){
 	});
 
 	/*
-		Initialize KeyBoard Events Proxy
+		Map the keyboard events to more specific key events
 	*/
-
+	
 	document.addEventListener("keydown",keyDownHandler);
 	document.addEventListener("keyup",keyUpHandler);
 
