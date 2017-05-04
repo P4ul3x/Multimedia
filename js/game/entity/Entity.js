@@ -13,8 +13,7 @@ class Entity {
 	*/
 	constructor(identification){
 
-		if(!identification)
-			throw "Entity: constructor(): InvalidArgumentsException";
+		if(!identification) throw "Entity: constructor(): InvalidArgumentsException";
 
 		this.identification = identification;
 		this.components = {};
@@ -40,7 +39,16 @@ class Entity {
 	*/
 	removeComponent(componentIdentification){
 
-		delete this.components[componentIdentification]
+		delete this.components[componentIdentification];
+	}
+
+	/*
+		Returns a component with the given identification from this entity
+
+		@componentIdentification: the components' identification
+	*/
+	getComponent(componentIdentification){
+		return this.components[componentIdentification];
 	}
 
 	/*

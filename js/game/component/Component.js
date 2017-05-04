@@ -12,14 +12,22 @@ class Component {
 	*/
 	constructor(identification){
 
-		if(!identification)
-			throw "Component: constructor(): InvalidArgumentsException";
+		if(!identification) throw "Component: constructor(): InvalidArgumentsException";
 
 		this.identification = identification;
-		this.data;
 	}
 
+	/*
+		Abstract method to be implemented by subclasses
+	*/
 	update(){
+
+	}
+
+	/*
+		Abstract method to be implemented by subclasses
+	*/
+	get value(){
 
 	}
 
