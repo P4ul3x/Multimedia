@@ -1,20 +1,19 @@
 "use strict";
 
-// @Version: 0.1.0
-
 /*
+	@Abstract
+
 	Components are entity attributes (Health, Mana, Speed, etc)
 */
 class Component {
 
-	/*
-		@identification: any comparable object
-	*/
-	constructor(identification){
+	constructor(entity){
 
-		if(!identification) throw "Component: constructor(): InvalidArgumentsException";
+		if(!(entity instanceof Entity)) throw "Component: constructor(): InvalidArgumentsException";
 
-		this.identification = identification;
+		this.identification = this.constructor.name;
+
+		this.entity = entity;
 	}
 
 	/*

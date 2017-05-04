@@ -14,14 +14,14 @@ class Position extends Component {
 	*/
 	constructor(entity,xCoordinate,yCoordinate){
 
-		super("position");
+		super(entity);
 
-		if(!(entity instanceof Entity)
-		|| typeof xCoordinate !== "number"
+		if(typeof xCoordinate !== "number"
 		|| typeof yCoordinate !== "number"
 		) throw "Position: constructor(): InvalidArgumentsException";
 
-		this.entity = entity;
+		this.identification = this.constructor.name;
+
 		this.xCoordinate = xCoordinate;
 		this.yCoordinate = yCoordinate;
 	}
@@ -31,7 +31,7 @@ class Position extends Component {
 	*/
 	update(){
 
-		let speed = this.entity.getComponent("speed");
+		let speed = this.entity.getComponent("Speed");
 		if(speed){
 			this.xCoordinate += speed.X();
 			this.yCoordinate += speed.Y();
@@ -57,6 +57,8 @@ class Position extends Component {
 
 	static test(){
 		console.log("TEST: Position");
+		let speed = new Speed(100,20,new Entity("Player"));
+		console.log(speed.identification);
 		console.log("Position TEST SUCCEEDED");
 		window.dispatchEvent(new Event("done"));
 	}

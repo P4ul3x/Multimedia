@@ -2,17 +2,13 @@
 
 // @Version: 0.1.0
 
-class Speed extends Component {
+class Speed extends Vector {
 
-	constructor(entity,xSpeed,ySpeed){
+	constructor(entity,xValue,yValue){
 
-		if(typeof xSpeed !== "number"
-		|| typeof ySpeed !== "number"
-		) throw "Speed: constructor(): InvalidArgumentsException";
+		super(entity,xValue,yValue);
 
-		this.entity = entity;
-		this.xSpeed = xSpeed;
-		this.ySpeed = ySpeed;
+		this.identification = this.constructor.name;
 	}
 
 	/*
@@ -20,22 +16,11 @@ class Speed extends Component {
 	*/
 	update(){
 
-		let speedController = this.entity.getComponent("speedController");
-		if(speedController){
-			this.xSpeed += speedController.X();
-			this.ySpeed += speedController.Y();
+		let acceleration = this.entity.getComponent("Acceleration");
+		if(acceleration){
+			this.xValue += acceleration.X();
+			this.yValue += acceleration.Y();
 		}
-	}
-
-	/*
-		@OVERRIDE
-
-		Returns the absolute value of this speeds vector
-
-		value = sqrt( x^2 + y^2 )
-	*/
-	get value(){
-		return Math.sqrt(this.xSpeed*this.xSpeed+this.ySpeed*this.ySpeed);
 	}
 }
 

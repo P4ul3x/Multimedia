@@ -6,17 +6,20 @@ class Health extends Component {
 
 	constructor(entity,startingValue){
 
-		super("health");
+		super(entity);
 
 		if(typeof startingValue !== "number") throw "Health: constructor(): InvalidArgumentsException";
 
-		this.entity = entity;
+		this.identification = this.constructor.name;
+
 		this.startingHealth = startingHealth;
 		this.currentHealth = startingHealth;
 	}
 
 	/*
 		@OVERRIDE
+
+		TODO
 	*/
 	update(){
 
