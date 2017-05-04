@@ -57,8 +57,6 @@ class Position extends Component {
 
 	static test(){
 		console.log("TEST: Position");
-		let speed = new Speed(100,20,new Entity("Player"));
-		console.log(speed.identification);
 		console.log("Position TEST SUCCEEDED");
 		window.dispatchEvent(new Event("done"));
 	}
