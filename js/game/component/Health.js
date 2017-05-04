@@ -1,7 +1,5 @@
 "use strict";
 
-// @Version: 0.1.0
-
 class Health extends Component {
 
 	constructor(entity,startingValue){
@@ -23,13 +21,13 @@ class Health extends Component {
 	*/
 	update(){
 
-		let damage = this.entity.getComponent("damage");
+		let damage = this.entity.getComponent("Damage");
 		if(damage) this.currentHealth = Math.max(0,this.currentHealth-damage.value());
 
-		let heal = this.entity.getComponent("heal");
+		let heal = this.entity.getComponent("Heal");
 		if(heal) this.currentHealth = Math.max(this.startingHealth,this.currentHealth+heal.value());
 
-		let revive = this.entity.getComponent("revive");
+		let revive = this.entity.getComponent("Revive");
 		if(revive) this.currentHealth = this.startingHealth;
 	}
 

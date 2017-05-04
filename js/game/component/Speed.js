@@ -1,7 +1,5 @@
 "use strict";
 
-// @Version: 0.1.0
-
 class Speed extends Vector {
 
 	constructor(entity,xValue,yValue){

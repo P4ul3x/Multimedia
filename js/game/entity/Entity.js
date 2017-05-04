@@ -1,16 +1,16 @@
 "use strict";
 
-// @Version: 0.2.0
-
 /*
 	An Entity is anything identifiable.
 	It may or may not have components associated.
 */
 class Entity {
 
-	constructor(){
+	constructor(identification){
 
-		this.identification = this.constructor.name + nextIdentification(this.constructor.name);
+		if(identification) this.identification = identification + nextIdentification(identification);
+		else this.identification = this.constructor.name + nextIdentification(this.constructor.name);
+
 		this.components = {};
 	}
 
@@ -43,6 +43,7 @@ class Entity {
 		@componentIdentification: the components' identification
 	*/
 	getComponent(componentIdentification){
+
 		return this.components[componentIdentification];
 	}
 

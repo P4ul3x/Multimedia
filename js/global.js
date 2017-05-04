@@ -5,17 +5,7 @@
 */
 
 window.GLOBAL = {
-	KEYS:{
-		UP:"ArrowUp",
-		RIGHT:"ArrowRight",
-		DOWN:"ArrowDown",
-		LEFT:"ArrowLeft",
-		ENTER:"Enter",
-		BACK:"b"
-	},
-	OBJECTS:{
-
-	}
+	OBJECTS:{}
 };
 
 function nextIdentification(objectName){

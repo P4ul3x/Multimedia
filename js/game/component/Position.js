@@ -1,29 +1,20 @@
 "use strict";
 
-// @Version: 0.1.0
-
 /*
 	A Position is a meaninfull way of saving
 	two dimensional coordinates.
 */
-class Position extends Component {
+class Position extends Vector {
 
 	/*
-		@xCoordinate: the x-axis coordinate of the context
-		@yCoordinate: the y-axis coordinate of the context
+		@xValue: the x-axis coordinate of the context
+		@yValue: the y-axis coordinate of the context
 	*/
-	constructor(entity,xCoordinate,yCoordinate){
+	constructor(entity,xValue,yValue){
 
-		super(entity);
-
-		if(typeof xCoordinate !== "number"
-		|| typeof yCoordinate !== "number"
-		) throw "Position: constructor(): InvalidArgumentsException";
+		super(entity,xValue,yValue);
 
 		this.identification = this.constructor.name;
-
-		this.xCoordinate = xCoordinate;
-		this.yCoordinate = yCoordinate;
 	}
 
 	/*
@@ -33,17 +24,9 @@ class Position extends Component {
 
 		let speed = this.entity.getComponent("Speed");
 		if(speed){
-			this.xCoordinate += speed.X();
-			this.yCoordinate += speed.Y();
+			this.xValue += speed.X();
+			this.yValue += speed.Y();
 		}
-	}
-
-	get X(){
-		return this.x;
-	}
-
-	get Y(){
-		return this.y;
 	}
 
 	/*
