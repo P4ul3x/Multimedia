@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Uni</title>
+	<!-- MENU RELATED -->
 	<link rel="stylesheet" type="text/css" href="../css/Menu.css">
 	<link rel="stylesheet" type="text/css" href="../css/MainMenu.css">
 	<link rel="stylesheet" type="text/css" href="../css/SinglePlayerMenu.css">
@@ -12,11 +13,6 @@
 	<link rel="stylesheet" type="text/css" href="../css/CreditsMenu.css">
 	<link rel="stylesheet" type="text/css" href="../css/GameMenu.css">
 	<link rel="stylesheet" type="text/css" href="../css/GamePauseMenu.css">
-	<script type="text/javascript" src="../js/global.js"></script>
-	<script type="text/javascript" src="../js/game/component/Component.js"></script>
-	<script type="text/javascript" src="../js/game/component/Position.js"></script>
-	<script type="text/javascript" src="../js/game/entity/Entity.js"></script>
-	<script type="text/javascript" src="../js/game/Engine.js"></script>
 	<script type="text/javascript" src="../js/menu/Menu.js"></script>
 	<script type="text/javascript" src="../js/menu/MainMenu.js"></script>
 	<script type="text/javascript" src="../js/menu/SinglePlayerMenu.js"></script>
@@ -26,11 +22,20 @@
 	<script type="text/javascript" src="../js/menu/CreditsMenu.js"></script>
 	<script type="text/javascript" src="../js/menu/GameMenu.js"></script>
 	<script type="text/javascript" src="../js/menu/GamePauseMenu.js"></script>
+
+	<!-- GAME RELATED -->
+	<script type="text/javascript" src="../js/global.js"></script>
+	<script type="text/javascript" src="../js/game/Engine.js"></script>
+	<script type="text/javascript" src="../js/game/component/Component.js"></script>
+	<script type="text/javascript" src="../js/game/component/Speed.js"></script>
+	<script type="text/javascript" src="../js/game/component/Position.js"></script>
+	<script type="text/javascript" src="../js/game/component/Health.js"></script>
+	<script type="text/javascript" src="../js/game/entity/Entity.js"></script>
 	<script type="text/javascript">
 		"use strict";
 
 		var tests = [
-			Location.test,
+			Position.test,
 			Entity.test,
 			Engine.test,
 			Menu.test,
