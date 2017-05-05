@@ -1,4 +1,4 @@
-<!DOCTYPE html>	<!-- @Version: 0.1.2 -->
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/CreditsMenu.css">
 	<link rel="stylesheet" type="text/css" href="../css/GameMenu.css">
 	<link rel="stylesheet" type="text/css" href="../css/GamePauseMenu.css">
-
+	
 	<script type="text/javascript" src="../js/menu/Menu.js"></script>
 	<script type="text/javascript" src="../js/menu/MainMenu.js"></script>
 	<script type="text/javascript" src="../js/menu/SinglePlayerMenu.js"></script>
@@ -43,56 +43,33 @@
 	<script type="text/javascript" src="../js/game/entity/Game.js"></script>
 	<script type="text/javascript" src="../js/game/entity/Obstacle.js"></script>
 
-	<script type="text/javascript" src="../js/index.js"></script>
+	<script type="text/javascript">
+
+		"use strict";
+
+		var tests = [
+			Game.test
+		];
+
+		(
+			function(){
+				window.addEventListener("load",test);
+			}()
+		);
+
+		function test(){
+			var i = 1;
+			function next(){
+				if(i<tests.length)
+					tests[i++]();
+			}
+			window.addEventListener("done",next);
+			tests[0]();
+		}
+
+	</script>
 </head>
 <body>
-	<audio id="music" autoplay loop>
-		<source src="../resources/menu/Direct-Tranquility.mp3" type="audio/mpeg">
-		Your browser does not support the html5 audio tag.
-	</audio>
-	<div id="MainMenu" class="Menu">
-		<div id="MainMenuButtons">
-			<button id="MainMenuSinglePlayerButton">Single Player</button>
-			<button id="MainMenuMultiPlayerButton">Multi Player</button>
-			<button id="MainMenuOptionsButton">Options</button>
-			<button id="MainMenuHelpButton">Help</button>
-			<button id="MainMenuCreditsButton">Credits</button>
-			<button id="MainMenuQuitButton">Quit</button>
-		</div>
-	</div>
-	<div id="SinglePlayerMenu" class="Menu">
-		<div id="levelDiv">
-			<nav id="levelNavigation">
-				<button id="levelButton1" class="levelButton"></button>
-				<button id="levelButton2" class="levelButton"></button>
-				<button id="levelButton3" class="levelButton"></button>
-				<button id="levelButton4" class="levelButton"></button>
-			</nav>
-		</div>
-		<div id="characterDiv">
-			<nav id ="characterNavigation">
-				<button id="characterButton1" class="characterButton"></button>
-				<button id="characterButton2" class="characterButton"></button>
-				<button id="characterButton3" class="characterButton"></button>
-				<button id="characterButton4" class="characterButton"></button>
-			</nav>
-			<figure id="slideshow"></figure>
-		</div>
-		<button id="backButtonSinglePlayer">Back</button>
-		<button id="startButtonSinglePlayer">Start</button>
- 	</div>
-	<div id="MultiPlayerMenu" class="Menu"></div>
-	<div id="OptionsMenu" class="Menu">
-		<button id="OptionsMenuBackButton">Back</button>
-		<input id="VolumeControl" type="range" min="0.0" max="1.0" step="0.01">
-	</div>
-	<div id="HelpMenu" class="Menu">
-		<button id="HelpMenuBackButton">Back</button>
-	</div>
-	<div id="CreditsMenu" class="CreditsMenu"></div>
-	<div id="GameMenu" class="Menu">
-		<canvas id="GameMenuCanvas"></canvas>
-	</div>
-	<div id="GamePauseMenu" class="Menu"></div>
+	<canvas id="TestCanvas"></canvas>
 </body>
 </html>
