@@ -7,12 +7,11 @@
 */
 class Component {
 
-	constructor(entity,identification){
+	constructor(entity){
 
 		if(!(entity instanceof Entity)) throw "Component: constructor(): InvalidArgumentsException";
 
-		if(identification) this.identification = identification; 
-		else this.identification = this.constructor.name;
+		this.identification = this.constructor.name;
 
 		this.entity = entity;
 	}

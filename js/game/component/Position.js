@@ -13,8 +13,6 @@ class Position extends Vector {
 	constructor(entity,xValue,yValue){
 
 		super(entity,xValue,yValue);
-
-		this.identification = this.constructor.name;
 	}
 
 	/*
@@ -24,8 +22,8 @@ class Position extends Vector {
 
 		let speed = this.entity.getComponent("Speed");
 		if(speed){
-			this.xValue += speed.X();
-			this.yValue += speed.Y();
+			this.xValue += speed.X;
+			this.yValue += speed.Y;
 		}
 	}
 

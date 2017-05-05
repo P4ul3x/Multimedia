@@ -6,23 +6,23 @@
 */
 class Entity {
 
-	constructor(identification){
+	constructor(){
 
-		if(identification) this.identification = identification + nextIdentification(identification);
-		else this.identification = this.constructor.name + nextIdentification(this.constructor.name);
+		this.identification = this.constructor.name + nextIdentification(this.constructor.name);
 
 		this.components = {};
 	}
 
 	/*
-		Adds a component to this entity
+		Adds a component to this entity.
+		If an entity already has a component of the specified type,
+		this method will override that component.
 
 		@component: the component to be added
 	*/
 	addComponent(component){
 
-		if(!(component instanceof Component))
-			throw "Entity: addComponent(): InvalidArgumentsException";
+		if(!(component instanceof Component)) throw "Entity: addComponent(): InvalidArgumentsException";
 
 		this.components[component.identification] = component;
 	}

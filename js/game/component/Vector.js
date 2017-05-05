@@ -19,8 +19,6 @@ class Vector extends Component {
 		|| typeof yValue !== "number"
 		) throw "Vector: constructor(): InvalidArgumentsException";
 
-		this.identification = this.constructor.name;
-
 		this.xValue = xValue;
 		this.yValue = yValue;
 	}

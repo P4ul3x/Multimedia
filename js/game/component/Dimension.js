@@ -4,7 +4,11 @@ class Dimension extends Component {
 
 	constructor(entity,width,height){
 
-		super(entity,this.constructor.name);
+		super(entity);
+
+		if(typeof width !== "number"
+		|| typeof height !== "number"
+		) throw "Dimension: constructor(): InvalidArgumentsException";
 
 		this.width = width;
 		this.height = height;

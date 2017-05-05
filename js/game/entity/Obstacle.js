@@ -1,10 +1,10 @@
 "use strict";
 
-class Obstacle {
+class Obstacle extends Entity {
 
 	constructor(position,dimension,image,visible,solid){
 
-		super(this.constructor.name);
+		super();
 
 		if(!(position instanceof Position)
 		|| !(dimension instanceof Dimension)
