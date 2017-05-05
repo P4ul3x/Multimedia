@@ -45,16 +45,15 @@ class SinglePlayerMenu extends Menu {
 		//selected is the number of the button
 		selected = parseInt(ev.target.id.charAt(ev.target.id.length-1));
 		
-		if(this.selectedCharacter>0)
+		if(this.selectedLevel>0)
 			this.levelButton[this.selectedLevel-1].style.borderStyle = "outset";
 		
 		if(this.availableLevels.includes(selected)){
 			this.selectedLevel = selected;
 			ev.target.style.borderStyle = "inset";
 		}
-		else{
-			this.selectedCharacter = -1;
-		}	
+		else
+			this.selectedLevel;
 		
 		console.log(this.selectedLevel);
 	}
