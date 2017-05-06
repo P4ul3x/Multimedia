@@ -20,7 +20,7 @@ class Game extends Engine {
 				entity1.addComponent(new Representation(entity1,image));
 				entity1.addComponent(new Position(entity1,100,20));
 				entity1.addComponent(new Visible(entity1));
-				entity1.addComponent(new Speed(entity1,10,0));
+				entity1.addComponent(new Velocity(entity1,10,0));
 				game.addEntity(entity1);
 				
 				game.start();
