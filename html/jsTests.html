@@ -2,46 +2,47 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Uni</title>
-	<!-- MENU RELATED -->
-	<link rel="stylesheet" type="text/css" href="../css/Menu.css">
-	<link rel="stylesheet" type="text/css" href="../css/MainMenu.css">
-	<link rel="stylesheet" type="text/css" href="../css/SinglePlayerMenu.css">
-	<link rel="stylesheet" type="text/css" href="../css/MultiPlayerMenu.css">
-	<link rel="stylesheet" type="text/css" href="../css/OptionsMenu.css">
-	<link rel="stylesheet" type="text/css" href="../css/HelpMenu.css">
-	<link rel="stylesheet" type="text/css" href="../css/CreditsMenu.css">
-	<link rel="stylesheet" type="text/css" href="../css/GameMenu.css">
-	<link rel="stylesheet" type="text/css" href="../css/GamePauseMenu.css">
-	
-	<script type="text/javascript" src="../js/menu/Menu.js"></script>
-	<script type="text/javascript" src="../js/menu/MainMenu.js"></script>
-	<script type="text/javascript" src="../js/menu/SinglePlayerMenu.js"></script>
-	<script type="text/javascript" src="../js/menu/MultiPlayerMenu.js"></script>
-	<script type="text/javascript" src="../js/menu/OptionsMenu.js"></script>
-	<script type="text/javascript" src="../js/menu/HelpMenu.js"></script>
-	<script type="text/javascript" src="../js/menu/CreditsMenu.js"></script>
-	<script type="text/javascript" src="../js/menu/GameMenu.js"></script>
-	<script type="text/javascript" src="../js/menu/GamePauseMenu.js"></script>
 
-	<!-- GAME RELATED -->
+	<title>Uni</title>
+
 	<script type="text/javascript" src="../js/global.js"></script>
 
 	<script type="text/javascript" src="../js/game/component/Component.js"></script>
-	<script type="text/javascript" src="../js/game/component/Vector.js"></script>
-	<script type="text/javascript" src="../js/game/component/Acceleration.js"></script>
-	<script type="text/javascript" src="../js/game/component/Speed.js"></script>
-	<script type="text/javascript" src="../js/game/component/Position.js"></script>
-	<script type="text/javascript" src="../js/game/component/Dimension.js"></script>
-	<script type="text/javascript" src="../js/game/component/Representation.js"></script>
-	<script type="text/javascript" src="../js/game/component/Visible.js"></script>
-	<script type="text/javascript" src="../js/game/component/Context.js"></script>
-	<script type="text/javascript" src="../js/game/component/Health.js"></script>
+
+	<script type="text/javascript" src="../js/game/component/visible/Visible.js"></script>
+
+	<script type="text/javascript" src="../js/game/component/vector/Vector.js"></script>
+	<script type="text/javascript" src="../js/game/component/vector/Acceleration.js"></script>
+	<script type="text/javascript" src="../js/game/component/vector/Speed.js"></script>
+	<script type="text/javascript" src="../js/game/component/vector/Position.js"></script>
+
+	<script type="text/javascript" src="../js/game/component/resistance/Resistance.js"></script>
+	<script type="text/javascript" src="../js/game/component/resistance/AbilityResistance.js"></script>
+	<script type="text/javascript" src="../js/game/component/resistance/CollisionResistance.js"></script>
+
+	<script type="text/javascript" src="../js/game/component/representation/Representation.js"></script>
+
+	<script type="text/javascript" src="../js/game/component/regeneration/Regeneration.js"></script>
+	<script type="text/javascript" src="../js/game/component/regeneration/HealthRegeneration.js"></script>
+
+	<script type="text/javascript" src="../js/game/component/health/Health.js"></script>
+
+	<script type="text/javascript" src="../js/game/component/dimension/Dimension.js"></script>
+
+	<script type="text/javascript" src="../js/game/component/damage/Damage.js"></script>
+	<script type="text/javascript" src="../js/game/component/damage/AbilityDamage.js"></script>
+	<script type="text/javascript" src="../js/game/component/damage/CollisionDamage.js"></script>
+
+	<script type="text/javascript" src="../js/game/component/context/Context.js"></script>
+
+	<script type="text/javascript" src="../js/game/component/collision/Collision.js"></script>
 
 	<script type="text/javascript" src="../js/game/entity/Entity.js"></script>
 	<script type="text/javascript" src="../js/game/entity/Engine.js"></script>
 	<script type="text/javascript" src="../js/game/entity/Game.js"></script>
 	<script type="text/javascript" src="../js/game/entity/Obstacle.js"></script>
+
+	<script type="text/javascript" src="../js/game/event/CollisionEvent.js"></script>
 
 	<script type="text/javascript">
 
@@ -70,6 +71,7 @@
 	</script>
 </head>
 <body>
-	<canvas id="TestCanvas"></canvas>
+	<canvas id="TestCanvas" width="1000" height="800"></canvas>
+	<canvas id="OperationCanvas"></canvas>
 </body>
 </html>
