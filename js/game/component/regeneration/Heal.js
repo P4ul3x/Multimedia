@@ -1,19 +1,20 @@
 "use strict";
 
-class Heal extends Component{
+class Heal extends Component {
 
-	constructor(entity,heal){
+	constructor(entity,value){
 
 		super(entity);
 
-		if(typeof heal !== "number") throw "Context: constructor(): InvalidArgumentsException";
+		if(typeof value !== "number") throw "Context: constructor(): InvalidArgumentsException";
 
-		this.heal = heal;
+		this.value = value;
 
 	}
 
 	get value(){
 
-		return this.heal;
+		return this.value;
 	}
 }
+
