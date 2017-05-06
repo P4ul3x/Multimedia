@@ -11,7 +11,7 @@ class Component {
 
 		if(!(entity instanceof Entity)) throw "Component: constructor(): InvalidArgumentsException";
 
-		this.identification = this.constructor.name;
+		this.identification = this.constructor.name + nextIdentification(this.constructor.name);
 
 		this.entity = entity;
 	}
@@ -28,12 +28,6 @@ class Component {
 	*/
 	get value(){
 
-	}
-
-	static test(){
-		console.log("TEST: COMPONENT");
-		console.log("COMPONENT TEST SUCCEEDED");
-		window.dispatchEvent(new Event("done"));
 	}
 }
 

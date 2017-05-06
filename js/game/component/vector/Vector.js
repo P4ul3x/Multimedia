@@ -24,10 +24,12 @@ class Vector extends Component {
 	}
 
 	get X(){
+
 		return this.xValue;
 	}
 
 	get Y(){
+
 		return this.yValue;
 	}
 
@@ -37,6 +39,7 @@ class Vector extends Component {
 		Returns the module/intensity of this vector ( sqrt( x^2 + y^2 ) )
 	*/
 	get value(){
+		
 		return Math.sqrt(this.xValue*this.xValue+this.yValue*this.yValue);
 	}
 }

@@ -37,11 +37,5 @@ class Visible extends Component {
 		let yCoordinate = position.Y;
 		context.putImageData(imageData,xCoordinate,yCoordinate);
 	}
-
-	static test(){
-		console.log("TEST: VISIBLE");
-		console.log("VISIBLE TEST SUCCEEDED");
-		window.dispatchEvent(new Event("done"));
-	}
 }
 

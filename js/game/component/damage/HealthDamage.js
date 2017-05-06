@@ -1,6 +1,6 @@
 "use strict";
 
-class HealthRegeneration extends Regeneration {
+class HealthDamage extends Damage {
 
 	constructor(entity,value){
 
@@ -15,7 +15,7 @@ class HealthRegeneration extends Regeneration {
 		let health = this.entity.getComponent("Health");
 		if(health){
 
-			health.add(this.value);
+			health.subtract(this.value);
 		}
 	}
 }

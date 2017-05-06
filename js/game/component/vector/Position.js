@@ -34,13 +34,8 @@ class Position extends Vector {
 		Returns a vector with this positions' coordinates
 	*/
 	get value(){
-		return [this.x,this.y];
-	}
 
-	static test(){
-		console.log("TEST: Position");
-		console.log("Position TEST SUCCEEDED");
-		window.dispatchEvent(new Event("done"));
+		return [this.x,this.y];
 	}
 }
 

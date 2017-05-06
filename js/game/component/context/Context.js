@@ -23,6 +23,7 @@ class Context extends Component {
 		@OVERRIDE
 	*/
 	get value(){
+		
 		return this.context;
 	}
 }
