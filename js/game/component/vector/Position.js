@@ -20,11 +20,11 @@ class Position extends Vector {
 	*/
 	update(){
 
-		let speed = this.entity.getComponent("Speed");
-		if(speed){
+		let velocity = this.entity.getComponent("Velocity");
+		if(velocity){
 
-			this.xValue += speed.X;
-			this.yValue += speed.Y;
+			this.xValue += velocity.X;
+			this.yValue += velocity.Y;
 		}
 	}
 
