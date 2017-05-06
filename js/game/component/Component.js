@@ -11,7 +11,7 @@ class Component {
 
 		if(!(entity instanceof Entity)) throw "Component: constructor(): InvalidArgumentsException";
 
-		this.identification = this.constructor.name + nextIdentification(this.constructor.name);
+		this.identification = this.constructor.name;
 
 		this.entity = entity;
 	}
