@@ -6,30 +6,25 @@ class SinglePlayerMenu extends Menu {
 
 	constructor(){
 		super("SinglePlayerMenu");
-		this.levelButton;
+		
 		this.availableLevels = [];
-		this.characterButton;
-		this.availableCharacters = [1];
-		this.slideshow;
-		this.backButton;
-		this.startButton;
+		this.availableCharacters = [1];	
 		this.selectedLevel = -1;
 		this.selectedCharacter = -1;
 
-		this.levelButton=document.getElementsByClassName("levelButton");
-		this.characterButton=document.getElementsByClassName("characterButton");
+		this.levelButton = document.getElementsByClassName("levelButton");
+		this.characterButton = document.getElementsByClassName("characterButton");
+		this.slideshow = document.getElementById("slideshow");
+		this.backButton = document.getElementById("backButtonSinglePlayer");
+		this.startButton = document.getElementById("startButtonSinglePlayer");
+
 
 		for (var i = 0; i < 4; i++) {
 			this.levelButton[i].addEventListener("click", this.levelButtonClickHandler.bind(this));
 			this.characterButton[i].addEventListener("click", this.characterButtonClickHandler.bind(this));
 		}
-
-		this.slideshow = document.getElementById("slideshow");
-		this.backButton = document.getElementById("backButtonSinglePlayer");
-		this.startButton = document.getElementById("startButtonSinglePlayer");
-
 		this.backButton.addEventListener("click", this.backButtonClickHandler.bind(this));
-		
+		this.startButton.addEventListener("click", this.startButtonClickHandler.bind(this));
 	}
 
 	/*
@@ -40,7 +35,8 @@ class SinglePlayerMenu extends Menu {
 
 	levelButtonClickHandler(ev){
 		ev.stopPropagation();
-		var selected;
+		
+		let selected;
 
 		//selected is the number of the button
 		selected = parseInt(ev.target.id.charAt(ev.target.id.length-1));
@@ -54,8 +50,6 @@ class SinglePlayerMenu extends Menu {
 		}
 		else
 			this.selectedLevel;
-		
-		console.log(this.selectedLevel);
 	}
 
 	/*
@@ -66,9 +60,9 @@ class SinglePlayerMenu extends Menu {
 
 	characterButtonClickHandler(ev){
 		ev.stopPropagation();
-		var selected;
+		let selected;
 
-		//selected is the number of the button
+		//selected is the number of the button last character
 		selected = parseInt(ev.target.id.charAt(ev.target.id.length-1));
 		
 		if(this.selectedCharacter>0)
@@ -100,14 +94,25 @@ class SinglePlayerMenu extends Menu {
 		
 		window.dispatchEvent(new Event("showMainMenu"));
 		
-		if(selectedLevel>0)
+		if(this.selectedLevel>0)
 			this.levelButton[this.selectedLevel-1].style.borderStyle = "outset";
 
-		if(selectedCharacter>0)
-			this.levelButton[this.selectedCharacter-1].style.borderStyle = "outset";
+		if(this.selectedCharacter>0)
+			this.characterButton[this.selectedCharacter-1].style.borderStyle = "outset";
 		
 		this.selectedLevel = -1;
 		this.selectedCharacter = -1;
+	}
+
+	/*
+		start button click handler
+		-TODO
+	*/
+
+
+	startButtonClickHandler(ev){
+		ev.stopPropagation();
+		console.log("Person pressed start... it's not very effective");
 	}
 
 
