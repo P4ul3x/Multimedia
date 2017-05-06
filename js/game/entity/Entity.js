@@ -55,11 +55,5 @@ class Entity {
 		for(let componentIdentification in this.components)
 			this.components[componentIdentification].update();
 	}
-
-	static test(){
-		console.log("TEST: ENTITY");
-		console.log("ENTITY TEST SUCCEEDED");
-		window.dispatchEvent(new Event("done"));
-	}
 }
 

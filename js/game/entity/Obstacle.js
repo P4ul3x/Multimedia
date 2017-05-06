@@ -2,22 +2,20 @@
 
 class Obstacle extends Entity {
 
-	constructor(position,dimension,image,visible,solid){
+	constructor(position,representation,visible,collision){
 
 		super();
 
 		if(!(position instanceof Position)
-		|| !(dimension instanceof Dimension)
-		|| !(image instanceof Image)
+		|| !(representation instanceof Representation)
 		|| !(visible instanceof Visible)
-		|| !(solid instanceof Solid)
+		|| !(collision instanceof Collision)
 		) throw "Terrain: constructor(): InvalidArgumentsException";
 
 		this.addComponent(position);
-		this.addComponent(dimension);
-		this.addComponent(image);
+		this.addComponent(representation);
 		this.addComponent(visible);
-		this.addComponent(solid);
+		this.addComponent(collision);
 	}
 }
 
