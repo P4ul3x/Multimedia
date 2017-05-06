@@ -16,6 +16,11 @@ window.GLOBAL = {
 	}()
 );
 
+/*
+	TODO:
+		reuse identifications
+		maximum number of identifications
+*/
 function nextIdentification(objectIdentification){
 	
 	let obj = window.GLOBAL.OBJECTS[objectIdentification];
