@@ -66,7 +66,7 @@
 	border: 4px #DDDDDD;
 	border-style: ridge groove groove ridge;
 	float: right;
-	background-image: url("../resources/menu/SinglePlayerMenu/character1.png");
+	background-image: url("../resources/menu/SinglePlayerMenu/default.png");
 	background-size: 1560px 390px;
 
 	animation-name: animationImage;
