@@ -2,9 +2,9 @@
 
 class Collision extends Component {
 
-	constructor(entity){
+	constructor(){
 
-		super(entity);
+		super();
 	}
 }
 

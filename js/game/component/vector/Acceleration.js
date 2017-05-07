@@ -2,9 +2,9 @@
 
 class Acceleration extends Vector {
 
-	constructor(entity,xValue,yValue){
+	constructor(xValue,yValue){
 
-		super(entity,xValue,yValue);
+		super(xValue,yValue);
 	}
 }
 

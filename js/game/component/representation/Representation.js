@@ -2,9 +2,9 @@
 
 class Representation extends Component {
 
-	constructor(entity,image){
+	constructor(image){
 
-		super(entity);
+		super();
 
 		if(!(image instanceof Image)) throw "Representation: constructor(): InvalidArgumentsException";
 

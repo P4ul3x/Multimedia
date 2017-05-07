@@ -4,7 +4,9 @@ class Velocity extends Vector {
 
 	constructor(entity,xValue,yValue){
 
-		super(entity,xValue,yValue);
+		super(xValue,yValue);
+
+		this.entity = entity;
 	}
 
 	/*

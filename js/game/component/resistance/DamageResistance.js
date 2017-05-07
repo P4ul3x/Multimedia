@@ -4,7 +4,9 @@ class DamageResistance extends Resistance {
 
 	constructor(entity,value){
 
-		super(entity,value);
+		super(value);
+
+		this.entity = entity;
 	}
 
 	/*

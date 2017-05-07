@@ -4,10 +4,11 @@ class Health extends Component {
 
 	constructor(entity,startingValue){
 
-		super(entity);
+		super();
 
 		if(typeof startingValue !== "number") throw "Health: constructor(): InvalidArgumentsException";
 
+		this.entity = entity;
 		this.startingHealth = startingHealth;
 		this.currentHealth = startingHealth;
 	}

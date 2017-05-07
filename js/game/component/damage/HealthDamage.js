@@ -4,7 +4,9 @@ class HealthDamage extends Damage {
 
 	constructor(entity,value){
 
-		super(entity,value);
+		super(value);
+
+		this.entity = entity;
 	}
 
 	/*

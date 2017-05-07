@@ -2,9 +2,16 @@
 
 class Resistance extends Component {
 
-	constructor(entity){
+	constructor(value){
 
-		super(entity);
+		super();
+
+		this.value = value;
+	}
+
+	get value(){
+
+		return this.value;
 	}
 }
 

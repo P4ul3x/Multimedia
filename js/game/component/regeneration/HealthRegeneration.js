@@ -4,7 +4,9 @@ class HealthRegeneration extends Regeneration {
 
 	constructor(entity,value){
 
-		super(entity,value);
+		super(value);
+
+		this.entity = entity;
 	}
 
 	/*

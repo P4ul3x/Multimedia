@@ -39,6 +39,8 @@ class Engine extends Entity {
 	*/
 	start(){
 
+		this.update();
+
 		for(let entityIdentification in this.entities)
 			this.entities[entityIdentification].update();
 

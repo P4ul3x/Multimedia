@@ -2,9 +2,9 @@
 
 class Regeneration extends Component {
 
-	constructor(entity,value){
+	constructor(value){
 
-		super(entity);
+		super();
 
 		this.value = value;
 	}

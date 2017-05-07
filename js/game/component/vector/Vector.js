@@ -11,9 +11,9 @@ class Vector extends Component {
 		@xValue: the x axis value of this vector
 		@yValue: the y axis value of this vector
 	*/
-	constructor(entity,xValue,yValue){
+	constructor(xValue,yValue){
 
-		super(entity);
+		super();
 
 		if(typeof xValue !== "number"
 		|| typeof yValue !== "number"
