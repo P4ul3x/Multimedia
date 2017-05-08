@@ -2,7 +2,7 @@
 
 class Draw extends Component {
 
-	constructor(framesToLive=Number.MAX_SAFE_INTEGER){
+	constructor(framesToLive=Number.POSITIVE_INFINITY){
 
 		super(framesToLive);
 	}

@@ -2,7 +2,7 @@
 
 class Health extends Component {
 
-	constructor(value,framesToLive=Number.MAX_SAFE_INTEGER){
+	constructor(value,framesToLive=Number.POSITIVE_INFINITY){
 
 		super(framesToLive);
 

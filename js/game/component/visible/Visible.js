@@ -2,9 +2,9 @@
 
 class Visible extends Component {
 
-	constructor(){
+	constructor(framesToLive=Number.POSITIVE_INFINITY){
 
-		super();
+		super(framesToLive);
 	}
 }
 

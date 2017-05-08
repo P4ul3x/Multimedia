@@ -2,7 +2,7 @@
 
 class HealthRegeneration extends Regeneration {
 
-	constructor(value,framesToLive=Number.MAX_SAFE_INTEGER){
+	constructor(value,framesToLive=Number.POSITIVE_INFINITY){
 
 		super(value,framesToLive);
 	}

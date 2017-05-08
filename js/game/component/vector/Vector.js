@@ -2,7 +2,7 @@
 
 class Vector extends Component {
 
-	constructor(xValue,yValue,framesToLive=Number.MAX_SAFE_INTEGER){
+	constructor(xValue,yValue,framesToLive=Number.POSITIVE_INFINITY){
 
 		super(framesToLive);
 

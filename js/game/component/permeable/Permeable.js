@@ -1,6 +1,6 @@
 "use strict";
 
-class Collision extends Component {
+class Permeable extends Component {
 
 	constructor(framesToLive=Number.POSITIVE_INFINITY){
 

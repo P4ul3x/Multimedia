@@ -2,7 +2,7 @@
 
 class Velocity extends Vector {
 
-	constructor(xValue,yValue,entity,framesToLive=Number.MAX_SAFE_INTEGER){
+	constructor(xValue,yValue,entity,framesToLive=Number.POSITIVE_INFINITY){
 
 		super(xValue,yValue,framesToLive);
 

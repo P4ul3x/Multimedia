@@ -2,7 +2,7 @@
 
 class DamageResistance extends Resistance {
 
-	constructor(value,entity,framesToLive=Number.MAX_SAFE_INTEGER){
+	constructor(value,entity,framesToLive=Number.POSITIVE_INFINITY){
 
 		super(value,framesToLive);
 

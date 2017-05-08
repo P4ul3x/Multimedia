@@ -2,19 +2,19 @@
 
 class Context extends Component {
 
-	constructor(context,framesToLive=Number.MAX_SAFE_INTEGER){
+	constructor(entity,framesToLive=Number.POSITIVE_INFINITY){
 
 		super(framesToLive);
 
-		if(!(context instanceof CanvasRenderingContext2D)) throw "Context: constructor(): InvalidArgumentsException";
+		if(!(entity instanceof Entity)) throw "Context: constructor(): InvalidArgumentsException";
 
-		this.context = context;
+		this.entity = entity;
 	}
 
 	// @OVERRIDE
 	get value(){
 		
-		return this.context;
+		return this.entity.context;
 	}
 }
 

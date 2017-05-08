@@ -2,7 +2,7 @@
 
 class Representation extends Component {
 
-	constructor(imageData,framesToLive=Number.MAX_SAFE_INTEGER){
+	constructor(imageData,framesToLive=Number.POSITIVE_INFINITY){
 
 		super(framesToLive);
 
