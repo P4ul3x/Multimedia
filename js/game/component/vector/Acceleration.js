@@ -2,9 +2,9 @@
 
 class Acceleration extends Vector {
 
-	constructor(xValue,yValue){
+	constructor(xValue,yValue,framesToLive=Number.MAX_SAFE_INTEGER){
 
-		super(xValue,yValue);
+		super(xValue,yValue,framesToLive);
 	}
 }
 

@@ -1,19 +1,10 @@
 "use strict";
 
-/*
-	@Abstract
-
-	In this context, we assume a vector has always 2 dimensions.
-*/
 class Vector extends Component {
 
-	/*
-		@xValue: the x axis value of this vector
-		@yValue: the y axis value of this vector
-	*/
-	constructor(xValue,yValue){
+	constructor(xValue,yValue,framesToLive=Number.MAX_SAFE_INTEGER){
 
-		super();
+		super(framesToLive);
 
 		if(typeof xValue !== "number"
 		|| typeof yValue !== "number"
@@ -33,11 +24,7 @@ class Vector extends Component {
 		return this.yValue;
 	}
 
-	/*
-		@OVERRIDE
-
-		Returns the module/intensity of this vector ( sqrt( x^2 + y^2 ) )
-	*/
+	// @OVERRIDE
 	get value(){
 		
 		return Math.sqrt(this.xValue*this.xValue+this.yValue*this.yValue);

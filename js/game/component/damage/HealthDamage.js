@@ -2,23 +2,9 @@
 
 class HealthDamage extends Damage {
 
-	constructor(entity,value){
+	constructor(value,framesToLive=Number.MAX_SAFE_INTEGER){
 
-		super(value);
-
-		this.entity = entity;
-	}
-
-	/*
-		@OVERRIDE
-	*/
-	update(){
-
-		let health = this.entity.getComponent("Health");
-		if(health){
-
-			health.subtract(this.value);
-		}
+		super(value,framesToLive);
 	}
 }
 

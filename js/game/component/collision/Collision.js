@@ -2,9 +2,9 @@
 
 class Collision extends Component {
 
-	constructor(){
+	constructor(framesToLive=Number.MAX_SAFE_INTEGER){
 
-		super();
+		super(framesToLive);
 	}
 }
 

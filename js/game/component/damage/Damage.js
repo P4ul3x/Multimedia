@@ -2,30 +2,14 @@
 
 class Damage extends Component {
 
-	constructor(value){
+	constructor(value,framesToLive=Number.MAX_SAFE_INTEGER){
 
-		super();
+		super(framesToLive);
 
 		this.value = value;
 	}
 
-	add(value){
-
-		if(typeof value !== "number") throw "Damage: add(): InvalidArgumentsException";
-
-		this.value += value;
-	}
-
-	subtract(value){
-
-		if(typeof value !== "number") throw "Damage: subtract(): InvalidArgumentsException";
-
-		this.value = Math.max(0,this.value-value);
-	}
-
-	/*
-		@OVERRIDE
-	*/
+	// @OVERRIDE
 	get value(){
 
 		return this.value;

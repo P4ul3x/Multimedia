@@ -7,23 +7,31 @@
 */
 class Component {
 
-	constructor(){
+	constructor(framesToLive=Number.MAX_SAFE_INTEGER){
+
+		if(framesToLive <= 0) throw "Component: constructor(): InvalidArgumentsException";
 
 		this.identification = this.constructor.name;
+
+		this.framesToLive = framesToLive;
 	}
 
-	/*
-		Abstract method to be implemented by subclasses
-	*/
 	update(){
 
+		if(this.framesToLive !== Number.MAX_SAFE_INTEGER){
+
+			this.framesToLive--;
+
+			if(this.framesToLive <= 0){
+
+				this.entity.removeComponent(this.identification);
+			}
+		}
 	}
 
-	/*
-		Abstract method to be implemented by subclasses
-	*/
 	get value(){
 
+		return this.framesToLive;
 	}
 }
 

@@ -2,23 +2,13 @@
 
 class Velocity extends Vector {
 
-	constructor(entity,xValue,yValue){
+	constructor(xValue,yValue,entity,framesToLive=Number.MAX_SAFE_INTEGER){
 
-		super(xValue,yValue);
+		super(xValue,yValue,framesToLive);
+
+		if(!(entity instanceof Entity)) throw "Velocity: constructor(): InvalidArgumentsException";
 
 		this.entity = entity;
-	}
-
-	/*
-		@OVERRIDE
-	*/
-	update(){
-
-		let acceleration = this.entity.getComponent("Acceleration");
-		if(acceleration){
-			this.xValue += acceleration.X;
-			this.yValue += acceleration.Y;
-		}
 	}
 }
 

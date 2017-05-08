@@ -2,23 +2,13 @@
 
 class DamageResistance extends Resistance {
 
-	constructor(entity,value){
+	constructor(value,entity,framesToLive=Number.MAX_SAFE_INTEGER){
 
-		super(value);
+		super(value,framesToLive);
+
+		if(!(entity instanceof Entity)) throw "DamageResistance: constructor(): InvalidArgumentsException";
 
 		this.entity = entity;
-	}
-
-	/*
-		@OVERRIDE
-	*/
-	update(){
-
-		let damage = this.entity.getComponent("Damage");
-		if(damage){
-
-			damage.subtract(this.value);
-		}
 	}
 }
 
