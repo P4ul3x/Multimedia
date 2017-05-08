@@ -1,1 +1,21 @@
-/* @Version: 0.1.0 */
+/* @Version: 0.1.1 */
+
+#MultiPlayerMenu button {
+	color: white;
+	font-weight: bold;
+	width: 150px;
+	padding: 15px;
+	border: none;
+	border-radius: 25px;
+	background-color: #616161;
+	position: relative;
+}
+
+#MultiPlayerMenu button:hover {
+	background-color: #757575;
+}
+
+#MultiPlayerMenuBackButton {
+	top: 550px;
+	left: 10px;
+}

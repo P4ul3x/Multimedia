@@ -14,7 +14,8 @@
 }
 
 #OptionsMenuBackButton {
-	top: 553px;
+	top: 550px;
+	left: 10px;
 }
 
 #VolumeControl {
