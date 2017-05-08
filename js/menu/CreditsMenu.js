@@ -7,6 +7,12 @@ class CreditsMenu extends Menu {
 	constructor(){
 
 		super("CreditsMenu");
+		this.backButton = document.getElementById("CreditsMenuBackButton");
+		this.backButton.addEventListener("click", this.backButtonClickHandler);
+	}
+
+	backButtonClickHandler(){
+		window.dispatchEvent(new Event("showMainMenu"));
 	}
 
 	static test(){

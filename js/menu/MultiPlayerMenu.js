@@ -7,6 +7,12 @@ class MultiPlayerMenu extends Menu {
 	constructor(){
 
 		super("MultiPlayerMenu");
+		this.backButton = document.getElementById("MultiPlayerMenuBackButton");
+		this.backButton.addEventListener("click", this.backButtonClickHandler);
+	}
+
+	backButtonClickHandler() {
+		window.dispatchEvent(new Event("showMainMenu"));
 	}
 
 	static test(){
