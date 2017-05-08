@@ -12,6 +12,19 @@ class Position extends Vector {
 	}
 
 	// @OVERRIDE
+	update(){
+
+		super.update();
+
+		let velocity = this.entity.getComponent("Velocity");
+		if(velocity){
+
+			this.X += velocity.X;
+			this.Y += velocity.Y;
+		}
+	}
+
+	// @OVERRIDE
 	get value(){
 
 		return [this.x,this.y];

@@ -14,6 +14,20 @@ class Vector extends Component {
 		this.yValue = yValue;
 	}
 
+	set X(xValue){
+
+		if(typeof xValue !== "number") throw "Vector: set: X(): InvalidArgumentsException";
+
+		this.xValue = xValue;
+	}
+
+	set Y(yValue){
+
+		if(typeof yValue !== "number") throw "Vector: set: Y(): InvalidArgumentsException";
+
+		this.yValue = yValue;
+	}
+
 	get X(){
 
 		return this.xValue;

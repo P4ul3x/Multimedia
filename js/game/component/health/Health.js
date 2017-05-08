@@ -9,6 +9,8 @@ class Health extends Component {
 		if(typeof value !== "number"
 		|| value < 0
 		) throw "Health: constructor(): InvalidArgumentsException";
+
+		this.value = value;
 	}
 
 	// @OVERRIDE
