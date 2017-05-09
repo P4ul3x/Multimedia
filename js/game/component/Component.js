@@ -31,6 +31,11 @@ class Component {
 		return this.identification;
 	}
 
+	get entity(){
+
+		return this.entity;
+	}
+
 	get framesToLive(){
 
 		return this.framesToLive;
