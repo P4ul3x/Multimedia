@@ -18,7 +18,11 @@ class Health extends Component {
 
 		super.update();
 
-		// TODO
+		let healthRegeneration = this.entity.getComponent("HealthRegeneration");
+		if(healthRegeneration){
+
+			this.value += healthRegeneration.value;
+		}
 	}
 
 	set value(value){
