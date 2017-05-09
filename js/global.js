@@ -5,7 +5,17 @@
 */
 
 window.GLOBAL = {
-	OBJECTS:{}
+	OBJECTS:{},
+	MOVEMENTKEYS:{
+		UP:"ArrowUp",
+		RIGHT:"ArrowRight",
+		DOWN:"ArrowDown",
+		LEFT:"ArrowLeft"
+	},
+	KEYS:{
+		ENTER:"Enter",
+		BACK:"b"
+	}
 };
 
 (
