@@ -1,10 +1,10 @@
 "use strict";
 
-class Obstacle extends Entity {
+class Obstacle extends GameEntity {
 
-	constructor(position,representation,visible,collision){
+	constructor(position,representation,visible,collision,game){
 
-		super();
+		super(game);
 
 		if(!(position instanceof Position)
 		|| !(representation instanceof Representation)
