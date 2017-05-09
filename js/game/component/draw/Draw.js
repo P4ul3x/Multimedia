@@ -12,6 +12,15 @@ class Draw extends Component {
 
 		super.update();
 
+		let game = this.entity.game;
+		if(!game) return;
+
+		let context = game.context;
+		if(!context) return;
+
+		let imageData = representation.imageData;
+		if(!imageData) return;
+		
 		let representation = this.entity.getComponent("Representation");
 		if(!representation) return;
 
@@ -21,14 +30,6 @@ class Draw extends Component {
 		let position = this.entity.getComponent("Position");
 		if(!position) return;
 
-		let game = this.entity.game;
-		if(!game) return;
-
-		let context = game.context;
-		if(!context) return;
-
-		let imageData = representation.imageData;
-		if(!imageData) return;
 
 		context.putImageData(imageData,position.X,position.Y,imageData.width,imageData.height);
 	}
