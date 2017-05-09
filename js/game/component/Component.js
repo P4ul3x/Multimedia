@@ -2,11 +2,16 @@
 
 class Component {
 
-	constructor(framesToLive=Number.POSITIVE_INFINITY){
+	constructor(entity,framesToLive=Number.POSITIVE_INFINITY){
 
-		if(framesToLive <= 0) throw "Component: constructor(): InvalidArgumentsException";
+		if(typeof framesToLive !== "number"
+		|| framesToLive <= 0
+		|| !(entity instanceof Entity)
+		) throw "Component: constructor(): InvalidArgumentsException";
 
 		this.identification = this.constructor.name;
+
+		this.entity = entity;
 
 		this.framesToLive = framesToLive;
 	}
