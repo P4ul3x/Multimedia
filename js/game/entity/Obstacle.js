@@ -10,7 +10,7 @@ class Obstacle extends GameEntity {
 		|| !(representation instanceof Representation)
 		|| !(visible instanceof Visible)
 		|| !(collision instanceof Collision)
-		) throw "Terrain: constructor(): InvalidArgumentsException";
+		) throw "Obstacle: constructor(): InvalidArgumentsException";
 
 		this.addComponent(position);
 		this.addComponent(representation);
