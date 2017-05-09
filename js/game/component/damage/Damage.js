@@ -2,9 +2,13 @@
 
 class Damage extends Component {
 
-	constructor(value,framesToLive=Number.POSITIVE_INFINITY){
+	constructor(value,entity,framesToLive=Number.POSITIVE_INFINITY){
 
-		super(framesToLive);
+		super(entity,framesToLive);
+
+		if(typeof value !== "number"
+		|| value <= 0
+		) throw "Damage: constructor(): InvalidArgumentsException";
 
 		this.value = value;
 	}

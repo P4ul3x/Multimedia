@@ -4,11 +4,15 @@ class DamageResistance extends Resistance {
 
 	constructor(value,entity,framesToLive=Number.POSITIVE_INFINITY){
 
-		super(value,framesToLive);
+		super(value,entity,framesToLive);
+	}
 
-		if(!(entity instanceof Entity)) throw "DamageResistance: constructor(): InvalidArgumentsException";
+	// @OVERRIDE
+	update(){
 
-		this.entity = entity;
+		super.update();
+
+		// TODO
 	}
 }
 

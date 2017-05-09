@@ -4,11 +4,7 @@ class Position extends Vector {
 
 	constructor(xValue,yValue,entity,framesToLive=Number.POSITIVE_INFINITY){
 
-		super(xValue,yValue,framesToLive);
-
-		if(!(entity instanceof Entity)) throw "Position: constructor(): InvalidArgumentsException";
-
-		this.entity = entity;
+		super(xValue,yValue,entity,framesToLive);
 	}
 
 	// @OVERRIDE
@@ -22,12 +18,6 @@ class Position extends Vector {
 			this.X += velocity.X;
 			this.Y += velocity.Y;
 		}
-	}
-
-	// @OVERRIDE
-	get value(){
-
-		return [this.x,this.y];
 	}
 }
 

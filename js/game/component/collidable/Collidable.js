@@ -1,6 +1,6 @@
 "use strict";
 
-class PassiveCollision extends Collision {
+class Collidable extends Component {
 
 	constructor(entity,framesToLive=Number.POSITIVE_INFINITY){
 

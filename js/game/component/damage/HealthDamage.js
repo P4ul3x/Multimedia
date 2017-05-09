@@ -2,9 +2,17 @@
 
 class HealthDamage extends Damage {
 
-	constructor(value,framesToLive=Number.POSITIVE_INFINITY){
+	constructor(value,entity,framesToLive=Number.POSITIVE_INFINITY){
 
-		super(value,framesToLive);
+		super(value,entity,framesToLive);
+	}
+
+	// @OVERRIDE
+	update(){
+
+		super.update();
+
+		// TODO
 	}
 }
 

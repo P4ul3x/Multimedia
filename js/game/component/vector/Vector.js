@@ -2,9 +2,9 @@
 
 class Vector extends Component {
 
-	constructor(xValue,yValue,framesToLive=Number.POSITIVE_INFINITY){
+	constructor(xValue,yValue,entity,framesToLive=Number.POSITIVE_INFINITY){
 
-		super(framesToLive);
+		super(entity,framesToLive);
 
 		if(typeof xValue !== "number"
 		|| typeof yValue !== "number"
@@ -38,7 +38,6 @@ class Vector extends Component {
 		return this.yValue;
 	}
 
-	// @OVERRIDE
 	get value(){
 		
 		return Math.sqrt(this.xValue*this.xValue+this.yValue*this.yValue);

@@ -2,17 +2,23 @@
 
 class Representation extends Component {
 
-	constructor(imageData,framesToLive=Number.POSITIVE_INFINITY){
+	constructor(imageData,entity,framesToLive=Number.POSITIVE_INFINITY){
 
-		super(framesToLive);
+		super(entity,framesToLive);
 
 		if(!(imageData instanceof ImageData)) throw "Representation: constructor(): InvalidArgumentsException";
 
 		this.imageData = imageData;
 	}
 
-	// @OVERRIDE
-	get value(){
+	set imageData(imageData){
+
+		if(!(imageData instanceof ImageData)) throw "Representation: imageData(): InvalidArgumentsException";
+
+		this.imageData = imageData;
+	}
+
+	get imageData(){
 
 		return this.imageData;
 	}

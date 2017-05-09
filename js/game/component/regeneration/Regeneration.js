@@ -2,9 +2,9 @@
 
 class Regeneration extends Component {
 
-	constructor(value,framesToLive=Number.POSITIVE_INFINITY){
+	constructor(value,entity,framesToLive=Number.POSITIVE_INFINITY){
 
-		super(framesToLive);
+		super(entity,framesToLive);
 
 		if(typeof value !== "number"
 		|| value <= 0
@@ -13,7 +13,15 @@ class Regeneration extends Component {
 		this.value = value;
 	}
 
-	// @OVERRIDE
+	set value(value){
+
+		if(typeof value !== "number"
+		|| value <= 0
+		) throw "Regeneration: setValue(): InvalidArgumentsException";
+
+		this.value = value;
+	}
+
 	get value(){
 
 		return this.value;

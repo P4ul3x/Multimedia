@@ -26,6 +26,22 @@ class Component {
 		}
 	}
 
+	set entity(entity){
+
+		if(!(entity instanceof Entity)) throw "Component: setEntity(): InvalidArgumentsException";
+
+		this.entity = entity;
+	}
+
+	set framesToLive(framesToLive){
+
+		if(typeof framesToLive !== "number"
+		|| framesToLive <= 0
+		) throw "Component: setFramesToLive(): InvalidArgumentsException";
+
+		this.framesToLive = framesToLive;
+	}
+
 	get identification(){
 
 		return this.identification;

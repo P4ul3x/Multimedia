@@ -2,9 +2,17 @@
 
 class Draw extends Component {
 
-	constructor(framesToLive=Number.POSITIVE_INFINITY){
+	constructor(entity,framesToLive=Number.POSITIVE_INFINITY){
 
-		super(framesToLive);
+		super(entity,framesToLive);
+	}
+
+	// @OVERRIDE
+	update(){
+
+		super.update();
+
+		// TODO
 	}
 }
 

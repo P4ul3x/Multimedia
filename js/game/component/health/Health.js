@@ -2,9 +2,9 @@
 
 class Health extends Component {
 
-	constructor(value,framesToLive=Number.POSITIVE_INFINITY){
+	constructor(value,entity,framesToLive=Number.POSITIVE_INFINITY){
 
-		super(framesToLive);
+		super(entity,framesToLive);
 
 		if(typeof value !== "number"
 		|| value < 0
@@ -14,9 +14,25 @@ class Health extends Component {
 	}
 
 	// @OVERRIDE
+	update(){
+
+		super.update();
+
+		// TODO
+	}
+
+	set value(value){
+
+		if(typeof value !== "number"
+		|| value < 0
+		) throw "Health: setValue(): InvalidArgumentsException";
+
+		this.value = value;
+	}
+
 	get value(){
 
-		return this.currentHealth;
+		return this.value;
 	}
 }
 

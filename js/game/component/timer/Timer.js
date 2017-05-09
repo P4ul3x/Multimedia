@@ -2,15 +2,12 @@
 
 class Timer extends Component {
 
-	constructor(entity,component,framesToLive){
+	constructor(component,entity,framesToLive){
 
-		super(framesToLive);
+		super(entity,framesToLive);
 
-		if(!(entity instanceof Entity)
-		|| !(component instanceof Component)
-		) throw "Timer: constructor(): InvalidArgumentsException";
+		if(!(component instanceof Component)) throw "Timer: constructor(): InvalidArgumentsException";
 
-		this.entity = entity;
 		this.component = component;
 	}
 
@@ -23,6 +20,18 @@ class Timer extends Component {
 
 			this.entity.addComponent(this.component);
 		}
+	}
+
+	set component(component){
+
+		if(!(component instanceof Component)) throw "Timer: setComponent(): InvalidArgumentsException";
+
+		this.component = component;
+	}
+
+	get component(){
+
+		return this.component;
 	}
 }
 
