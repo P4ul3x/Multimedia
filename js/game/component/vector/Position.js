@@ -14,7 +14,7 @@ class Position extends Vector {
 
 		let velocity = this.entity.getComponent("VelocityByInput");
 		
-		//if(!velocity) velocity = this.entity.getComponent("VelocityByInput");
+		if(!velocity) velocity = this.entity.getComponent("Velocity");
 		
 		if(velocity){
 
