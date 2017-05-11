@@ -2,18 +2,18 @@
 
 class Component {
 
-	constructor(entity,framesToLive=Number.POSITIVE_INFINITY){
+	constructor(entity, framesToLive=Number.POSITIVE_INFINITY){
 
 		if(typeof framesToLive !== "number"
 		|| framesToLive <= 0
 		|| !(entity instanceof Entity)
 		) throw "Component: constructor(): InvalidArgumentsException";
 
-		this.identification = this.constructor.name;
+		this._identification = this.constructor.name;
 
-		this.entity = entity;
+		this._entity = entity;
 
-		this.framesToLive = framesToLive;
+		this._framesToLive = framesToLive;
 	}
 
 	update(){
@@ -26,11 +26,16 @@ class Component {
 		}
 	}
 
+	set identification(identification){
+
+		this._identification = identification;
+	}
+
 	set entity(entity){
 
 		if(!(entity instanceof Entity)) throw "Component: setEntity(): InvalidArgumentsException";
 
-		this.entity = entity;
+		this._entity = entity;
 	}
 
 	set framesToLive(framesToLive){
@@ -39,22 +44,22 @@ class Component {
 		|| framesToLive <= 0
 		) throw "Component: setFramesToLive(): InvalidArgumentsException";
 
-		this.framesToLive = framesToLive;
+		this._framesToLive = framesToLive;
 	}
 
 	get identification(){
 
-		return this.identification;
+		return this._identification;
 	}
 
 	get entity(){
 
-		return this.entity;
+		return this._entity;
 	}
 
 	get framesToLive(){
 
-		return this.framesToLive;
+		return this._framesToLive;
 	}
 }
 

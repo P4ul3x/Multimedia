@@ -8,19 +8,20 @@ class Representation extends Component {
 
 		if(!(imageData instanceof ImageData)) throw "Representation: constructor(): InvalidArgumentsException";
 
-		this.imageData = imageData;
+		this._imageData = imageData;
 	}
 
 	set imageData(imageData){
 
 		if(!(imageData instanceof ImageData)) throw "Representation: imageData(): InvalidArgumentsException";
 
-		this.imageData = imageData;
+		this._imageData = imageData;
 	}
 
 	get imageData(){
 
-		return this.imageData;
+		return this._imageData;
 	}
+
 }
 

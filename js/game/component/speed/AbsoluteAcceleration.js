@@ -1,6 +1,6 @@
 "use strict";
 
-class AbsoluteAcceleration extends Commponent{
+class AbsoluteAcceleration extends Component{
 
 	constructor(entity,value,framesToLive=Number.POSITIVE_INFINITY){
 
@@ -10,7 +10,7 @@ class AbsoluteAcceleration extends Commponent{
 		|| value<0
 		) throw "AbsoluteAcceleration: constructor(): InvalidArgumentsException";
 
-		this.value = value;
+		this._value = value;
 	}
 
 	// @OVERRIDE
@@ -25,11 +25,11 @@ class AbsoluteAcceleration extends Commponent{
 		|| value<0
 		) throw "AbsoluteAcceleration: constructor(): InvalidArgumentsException";
 
-		this.value = value;
+		this._value = value;
 	}
 
 	get value(){
 
-		return this.value;
+		return this._value;
 	}
 }

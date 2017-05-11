@@ -10,13 +10,22 @@ class Damage extends Component {
 		|| value <= 0
 		) throw "Damage: constructor(): InvalidArgumentsException";
 
-		this.value = value;
+		this._value = value;
+	}
+
+	set value(value){
+
+		if(typeof value !== "number"
+		|| value<0
+		) throw "Damage: constructor(): InvalidArgumentsException";
+
+		this._value = value;
 	}
 
 	// @OVERRIDE
 	get value(){
 
-		return this.value;
+		return this._value;
 	}
 }
 

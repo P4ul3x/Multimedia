@@ -10,7 +10,7 @@ class Health extends Component {
 		|| value < 0
 		) throw "Health: constructor(): InvalidArgumentsException";
 
-		this.value = value;
+		this._value = value;
 	}
 
 	// @OVERRIDE
@@ -31,12 +31,12 @@ class Health extends Component {
 		|| value < 0
 		) throw "Health: setValue(): InvalidArgumentsException";
 
-		this.value = value;
+		this._value = value;
 	}
 
 	get value(){
 
-		return this.value;
+		return this._value;
 	}
 }
 

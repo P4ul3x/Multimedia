@@ -1,8 +1,8 @@
 "use strict";
 
-class MaxSpeed extends Component{
+class BaseSpeed extends Component{
 
-	constructor(entity,value,framesToLive=Number.POSITIVE_INFINITY){
+	constructor(value,entity,framesToLive=Number.POSITIVE_INFINITY){
 
 		super(entity,framesToLive);
 
@@ -10,7 +10,7 @@ class MaxSpeed extends Component{
 		|| value<0
 		) throw "BaseSpeed: constructor(): InvalidArgumentsException";
 
-		this.value = value;
+		this._value = value;
 	}
 
 	// @OVERRIDE
@@ -25,11 +25,11 @@ class MaxSpeed extends Component{
 		|| value<0
 		) throw "BaseSpeed: constructor(): InvalidArgumentsException";
 
-		this.value = value;
+		this._value = value;
 	}
 
 	get value(){
 
-		return this.value;
+		return this._value;
 	}
 }

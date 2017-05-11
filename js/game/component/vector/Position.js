@@ -12,7 +12,10 @@ class Position extends Vector {
 
 		super.update();
 
-		let velocity = this.entity.getComponent("Velocity");
+		let velocity = this.entity.getComponent("VelocityByInput");
+		
+		//if(!velocity) velocity = this.entity.getComponent("VelocityByInput");
+		
 		if(velocity){
 
 			this.X += velocity.X;

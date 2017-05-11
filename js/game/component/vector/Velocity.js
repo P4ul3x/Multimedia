@@ -12,12 +12,11 @@ class Velocity extends Vector {
 
 		super.update();
 
-		let acceleration = this.entity.getComponent("Acceleration");
 		if(acceleration){
-
 			this.X += acceleration.X;
 			this.Y += acceleration.Y;
 		}
+
 	}
 }
 

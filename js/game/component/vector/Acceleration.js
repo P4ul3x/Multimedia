@@ -6,5 +6,6 @@ class Acceleration extends Vector {
 
 		super(xValue,yValue,entity,framesToLive);
 	}
+
 }
 

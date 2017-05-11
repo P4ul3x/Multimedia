@@ -10,7 +10,7 @@ class Resistance extends Component {
 		|| value <= 0
 		) throw "Resistance: constructor(): InvalidArgumentsException";
 
-		this.value = value;
+		this._value = value;
 	}
 
 	set value(value){
@@ -19,12 +19,12 @@ class Resistance extends Component {
 		|| value < 0
 		) throw "Resistance: setValue(): InvalidArgumentsException";
 
-		this.value = value;
+		this._value = value;
 	}
 
 	get value(){
 
-		return this.value;
+		return this._value;
 	}
 }
 
