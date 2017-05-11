@@ -80,13 +80,6 @@ function main(){
 	});
 
 	/*
-		Map the keyboard events to more specific key events
-	*/
-	
-	document.addEventListener("keydown",keyDownHandler);
-	document.addEventListener("keyup",keyUpHandler);
-
-	/*
 		Start the application
 	*/
 
@@ -94,23 +87,4 @@ function main(){
 	currentMenu.show();
 }
 
-function keyDownHandler(keyEvent){
-	let key = keyEvent.key;
-	if(key == window.GLOBAL.KEYS.ENTER) window.dispatchEvent(new Event("enterKeyDown"));
-	else if(key == window.GLOBAL.KEYS.BACK) window.dispatchEvent(new Event("backKeyDown"));
-	else if(key == window.GLOBAL.KEYS.UP) window.dispatchEvent(new Event("upKeyDown"));
-	else if(key == window.GLOBAL.KEYS.RIGHT) window.dispatchEvent(new Event("rightKeyDown"));
-	else if(key == window.GLOBAL.KEYS.DOWN) window.dispatchEvent(new Event("downKeyDown"));
-	else if(key == window.GLOBAL.KEYS.LEFT) window.dispatchEvent(new Event("leftKeyDown"));
-}
-
-function keyUpHandler(keyEvent){
-	let key = keyEvent.key;
-	if(key == window.GLOBAL.KEYS.ENTER) window.dispatchEvent(new Event("enterKeyUp"));
-	if(key == window.GLOBAL.KEYS.BACK) window.dispatchEvent(new Event("backKeyUp"));
-	else if(key == window.GLOBAL.KEYS.UP) window.dispatchEvent(new Event("upKeyUp"));
-	else if(key == window.GLOBAL.KEYS.RIGHT) window.dispatchEvent(new Event("rightKeyUp"));
-	else if(key == window.GLOBAL.KEYS.DOWN) window.dispatchEvent(new Event("downKeyUp"));
-	else if(key == window.GLOBAL.KEYS.LEFT) window.dispatchEvent(new Event("leftKeyUp"));
-}
 
