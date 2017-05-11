@@ -114,10 +114,6 @@
 	top: 50px;
 }
 
-#characterButton2, #characterButton3, #characterButton4 {
-	opacity: 0.5;
-}
-
-#levelButton2, #levelButton3, #levelButton4 {
+button:disabled {
 	opacity: 0.5;
 }

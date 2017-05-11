@@ -34,6 +34,10 @@ class SinglePlayerMenu extends Menu {
 	*/
 
 	levelButtonClickHandler(ev){
+
+		// Make character1 available (we don't have more) to select after we pick a map
+		document.getElementById('characterButton1').removeAttribute('disabled');
+
 		ev.stopPropagation();
 		
 		let selected;
@@ -62,11 +66,16 @@ class SinglePlayerMenu extends Menu {
 		ev.stopPropagation();
 		let selected;
 
+		// Make the start button clicable after we pick a character (can't start a game without picking first)
+		this.startButton.removeAttribute('disabled');
+
+
 		//selected is the number of the button last character
 		selected = parseInt(ev.target.id.charAt(ev.target.id.length-1));
 		
 		if(this.selectedCharacter>0)
 			this.characterButton[this.selectedCharacter-1].style.borderStyle = "outset";
+
 		
 		if(this.availableCharacters.includes(selected)){
 			this.selectedCharacter = selected;
