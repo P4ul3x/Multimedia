@@ -13,6 +13,10 @@
 	position: relative;
 }
 
+#MainMenuMultiPlayerButton {
+	opacity: 0.5;
+}
+
 #MainMenu button:hover {
 	background-color: #757575;
 }

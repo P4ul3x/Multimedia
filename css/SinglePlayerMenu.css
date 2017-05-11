@@ -4,7 +4,6 @@
 	position: relative;
 	background-image: url("../resources/menu/background.png");
 	background-size: 1000px 600px;
-    border: 2px solid #aaaaaa;
 }
 
 #levelDiv, #characterDiv{
@@ -105,8 +104,20 @@
 	top: 50px;
 }
 
+#SinglePlayerMenu button:hover {
+	background-color: #757575;
+}
+
 
 #startButtonSinglePlayer{
 	left: 690px;
 	top: 50px;
+}
+
+#characterButton2, #characterButton3, #characterButton4 {
+	opacity: 0.5;
+}
+
+#levelButton2, #levelButton3, #levelButton4 {
+	opacity: 0.5;
 }
