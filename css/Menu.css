@@ -6,8 +6,8 @@
 	height: 600px;
 	margin: auto;
 	display: none;
-	background-size: 1000px 600px;
-	background-image: url("../resources/menu/background.png");
-	background-repeat: no-repeat;
+	/*background-size: 1000px 600px; */
+	background-image: url("../resources/menu/background2.png");
+	/*background-repeat: no-repeat;*/
 }
 
