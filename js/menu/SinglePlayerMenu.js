@@ -115,6 +115,9 @@ class SinglePlayerMenu extends Menu {
 		// restore default disabled button states
 		this.characterButton[0].disabled = true;
 		this.startButton.disabled = true;
+		this.slideshow.style.backgroundImage = "url(../resources/menu/SinglePlayerMenu/default.png)";
+		this.slideshow.style.animationName = "none";
+
 	}
 
 	/*
