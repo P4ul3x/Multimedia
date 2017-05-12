@@ -1,31 +1,5 @@
 
-/* @Version: 0.1.3 */
-
-#MainMenu button {
-	color: white;
-	font-weight: bold;
-	width: 150px;
-	padding: 15px;
-	margin-bottom: 10px;
-	border: none;
-	border-radius: 25px;
-	background-color: #616161;
-	position: relative;
-}
-
-button:disabled {
-	opacity: 0.5;
-}
-
-#MainMenu button:hover {
-	background-color: #757575;
-}
-
-#MainMenuButtons {
-	position: relative;
-	top: 250px;
-	width: 150px;
-	margin: auto;
-	bottom: 0px;
+#MainMenu {
+	display: block;
 }
 

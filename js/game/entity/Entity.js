@@ -1,25 +1,57 @@
 "use strict";
 
-/*
-	An Entity is anything identifiable.
-*/
 class Entity {
 
-	constructor(){
+	constructor(game,framesToLive=Number.POSITIVE_INFINITY){
 
-		this._identification = this.constructor.name + nextIdentification(this.constructor.name);
+		this.Identification = this.constructor.name;
 
+		this.Game = game;
+
+		this.FramesToLive = framesToLive;
 	}
 
-	set identification(identification){
+	update(){
 
-		this._identification = identification;
+		this.FramesToLive--;
 	}
 
-	get identification(){
+	set Identification(identification){
 
-		return this._identification;
+		if(typeof identification !== "string") throw "Entity: set: Identification(): InvalidArgumentsException";
+
+		this.identification = identification;
 	}
 
+	set Game(game){
+
+		if(!(game instanceof Game)) throw "Entity: set: Game(): InvalidArgumentsException";
+
+		this.game = game;
+	}
+
+	set FramesToLive(framesToLive){
+
+		if(typeof framesToLive !== "number"
+		|| framesToLive < 0
+		) throw "Entity: set: FramesToLive(): InvalidArgumentsException";
+
+		this.framesToLive = framesToLive;
+	}
+
+	get Identification(){
+
+		return this.identification;
+	}
+
+	get Game(){
+
+		return this.game;
+	}
+
+	get FramesToLive(){
+
+		return this.framesToLive;
+	}
 }
 

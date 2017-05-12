@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Uni</title>
+		<title>Uni Test</title>
 
 		<link rel="stylesheet" type="text/css" href="../css/Menu.css">
 
@@ -21,6 +21,10 @@
 
 		<link rel="stylesheet" type="text/css" href="../css/GamePauseMenu.css">
 
+		<script type="text/javascript" src="../js/global/global.js"></script>
+
+		<!-- menu -->
+
 		<script type="text/javascript" src="../js/game/Game.js"></script>
 
 		<script type="text/javascript" src="../js/game/entity/Entity.js"></script>
@@ -34,6 +38,13 @@
 		<script type="text/javascript" src="../js/game/entity/component/collision/enemy/EnemyCollision.js"></script>
 
 		<script type="text/javascript" src="../js/game/entity/component/collision/player/PlayerCollision.js"></script>
+
+		<script type="text/javascript" src="../js/game/entity/component/intelligence/Intelligence.js"></script>
+
+
+		<script type="text/javascript" src="../js/game/entity/component/intelligence/input/InputIntelligence.js"></script>
+
+		<script type="text/javascript" src="../js/game/entity/component/intelligence/input/velocity/VelocityInputIntelligence.js"></script>
 
 		<script type="text/javascript" src="../js/game/entity/component/stat/Stat.js"></script>
 
@@ -65,56 +76,37 @@
 	</head>
 
 	<body>
-		<div id="MainMenu" class="Menu">
+		<canvas id="GameCanvas" width="1000" height="600"></canvas>
 
-			<h1>Welcome to Uni</h1>
-			
-			<button>Play</button>
+		<script type="text/javascript">
+			"use strict";
 
-			<button>Options</button>
+			var context = document.getElementById("GameCanvas").getContext("2d");
 
-			<button>Help</button>
+			var game = new Game(context);
 
-			<button>Credits</button>
+			var living = new Living(game);
 
-			<button>Quit</button>
+			var image = new Image();
 
-		</div>
+			image.addEventListener("load",function(){
 
-		<div id="PlayMenu" class="Menu">
-			
-			<button>Play</button>
+				let ctx = game.SecundaryContext;
+				ctx.canvas.width = image.width;
+				ctx.canvas.height = image.height;
+				ctx.drawImage(image,0,0);
+				let imageData = ctx.getImageData(0,0,ctx.canvas.width,ctx.canvas.height);
+				new Appearance(imageData,living,game);
+				new Position(100,100,living,game);
+				new Velocity(0,0,living,game);
+				new VelocityInputIntelligence(living,game);
+				game.start();
+				console.log(game);
+			});
 
-		</div>
+			image.crossOrigin = "Anonymous";
+			image.src = "https://raw.githubusercontent.com/P4ul3x/Multimedia/master/resources/menu/SinglePlayerMenu/interrogationMark.png";
 
-		<div id="OptionsMenu" class="Menu">
-
-		</div>
-
-		<div id="HelpMenu" class="Menu">
-			
-		</div>
-
-		<div id="CreditsMenu" class="Menu">
-			
-		</div>
-
-		<div id="GameMenu" class="Menu">
-
-			<canvas id="GameCanvas">Your browser does not support HTML5 canvas.</canvas>
-
-			<button>Pause</button>
-
-		</div>
-
-		<div id="GamePauseMenu" class="Menu">
-			
-			<button>Continue</button>
-
-			<button>Options</button>
-
-			<button>Quit</button>
-
-		</div>
+		</script>
 	</body>
 </html>

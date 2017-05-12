@@ -1,13 +1,9 @@
 
-/* @Version: 0.1.3 */
-
 .Menu {
-	width: 1000px;
-	height: 600px;
-	margin: auto;
 	display: none;
-	/*background-size: 1000px 600px; */
-	background-image: url("../resources/menu/background2.png");
-	/*background-repeat: no-repeat;*/
+	margin: auto;
+	width: 1000px;
+	height: 650px;
+	background-color: red;
 }
 
