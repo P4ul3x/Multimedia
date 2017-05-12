@@ -40,7 +40,14 @@ class Vector extends Component {
 
 	get value(){
 		
-		return Math.sqrt(this.xValue*this.xValue+this.yValue*this.yValue);
+		return Math.sqrt(this.X*this.X+this.Y*this.Y);
+	}
+
+	get direction(){
+		
+		if(this.value == 0) return [];
+
+		return [this.X/this.value, this.Y/this.value];
 	}
 }
 

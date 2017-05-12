@@ -6,7 +6,7 @@ class Component {
 
 		if(typeof framesToLive !== "number"
 		|| framesToLive <= 0
-		|| !(entity instanceof Entity)
+		|| !(entity instanceof GameEntity)
 		) throw "Component: constructor(): InvalidArgumentsException";
 
 		this._identification = this.constructor.name;
@@ -33,7 +33,7 @@ class Component {
 
 	set entity(entity){
 
-		if(!(entity instanceof Entity)) throw "Component: setEntity(): InvalidArgumentsException";
+		if(!(entity instanceof GameEntity)) throw "Component: setEntity(): InvalidArgumentsException";
 
 		this._entity = entity;
 	}

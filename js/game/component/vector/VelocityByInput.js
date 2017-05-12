@@ -37,8 +37,6 @@ class VelocityByInput extends Vector {
 
 		if(max) value = Math.max(max.value,value);
 
-		console.log(input.movementKey);
-
 		switch(input.movementKey){
 			case window.GLOBAL.MOVEMENT_KEYS.UP 	: this.X = 0;		this.Y = -value; 	break;
 			case window.GLOBAL.MOVEMENT_KEYS.RIGHT	: this.X = value;  	this.Y = 0;			break;

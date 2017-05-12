@@ -19,7 +19,6 @@ class MovementInput extends Input {
 		/*
 			remove key when up
 		*/
-
 		window.addEventListener("upKeyUp",		function(){ delete this._movementKey[window.GLOBAL.MOVEMENT_KEYS.UP]; 	 }.bind(this));
 		window.addEventListener("rightKeyUp",	function(){ delete this._movementKey[window.GLOBAL.MOVEMENT_KEYS.RIGHT]; }.bind(this));
 		window.addEventListener("downKeyUp", 	function(){ delete this._movementKey[window.GLOBAL.MOVEMENT_KEYS.DOWN];  }.bind(this));
