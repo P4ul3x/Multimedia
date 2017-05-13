@@ -70,11 +70,11 @@ class Living extends Entity {
 
 		let priority = this.priorities[componentIdentification];
 
-		if(priority === undefined) throw "Living: getComponent(): InvalidArgumentsException";
+		if(priority === undefined) return;
 
 		let local = this.components[priority];
 
-		if(local === undefined) throw "Living: getComponent(): InvalidArgumentsException";
+		if(local === undefined) return;
 
 		return local[componentIdentification];
 	}
