@@ -33,9 +33,9 @@
 
 		<script type="text/javascript" src="../js/game/entity/component/appearance/Appearance.js"></script>
 
-		<script type="text/javascript" src="../js/game/entity/component/collision/Collision.js"></script>
+		<script type="text/javascript" src="../js/game/entity/component/collidable/Collidable.js"></script>
 
-		<script type="text/javascript" src="../js/game/entity/component/collision/enemy/EnemyCollision.js"></script>
+		<script type="text/javascript" src="../js/game/entity/component/collision/Collision.js"></script>
 
 		<script type="text/javascript" src="../js/game/entity/component/collision/player/PlayerCollision.js"></script>
 
@@ -71,8 +71,6 @@
 		<script type="text/javascript" src="../js/game/entity/living/enemy/Enemy.js"></script>
 
 		<script type="text/javascript" src="../js/game/entity/living/player/Player.js"></script>
-
-		<script type="text/javascript" src="../js/index.js"></script>
 	</head>
 
 	<body>
@@ -96,10 +94,20 @@
 				ctx.canvas.height = image.height;
 				ctx.drawImage(image,0,0);
 				let imageData = ctx.getImageData(0,0,ctx.canvas.width,ctx.canvas.height);
+
 				new Appearance(imageData,living,game);
-				new Position(100,100,living,game);
+				new Position(500,100,living,game);
 				new Velocity(0,0,living,game);
 				new VelocityInputIntelligence(living,game);
+				new Collision(living,game);
+
+				let living2 = new Living(game);
+
+				new Appearance(imageData,living2,game);
+				new Position(100,20,living2,game);
+				//new Collision(living2,game);
+				new Collidable(living2,game);
+
 				game.start();
 				console.log(game);
 			});
